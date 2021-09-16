@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Checkout from "./components/checkout/Checkout";
 import Login from "./components/login/Login";
 import { useEffect } from "react";
-import { auth } from "./firebase";
+import { auth } from "../firebase";
 import { useStateValue } from "./StateProvider";
 import Payment from "./components/checkout/Payment";
 import Register from "./components/register/Register";
