@@ -1,31 +1,30 @@
-import React, { useState } from "react";
-import "./Login.css";
-import logo from "../images/icons/7777.png";
-import { Link, useHistory } from "react-router-dom";
-import { auth } from "../../firebase";
+import React, { useState } from 'react';
+import './Login.css';
+import logo from '../images/icons/7777.png';
+import { Link, useHistory } from 'react-router-dom';
+import { auth } from '../../firebase';
 
 function Login() {
-  // useHistory alows us to programatically change url when somethi ng
+  // useHistory allows us to programatically change url when something
   const history = useHistory();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const signIn = (event) => {
     event.preventDefault();
-
     // Firebase Funtionality
     auth
       .signInWithEmailAndPassword(email, password)
       .then((register) => {
         if (register) {
-          history.push("/");
+          history.push('/');
         }
       })
       .catch((error) => alert(error.message));
   };
 
   const toRegister = () => {
-    history.push("/register");
+    history.push('/register');
   };
 
   return (
@@ -43,7 +42,7 @@ function Login() {
             <input
               className="input"
               type="email"
-              /* This tires the useState to this input field */
+              // This ties the useState to this input field
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />

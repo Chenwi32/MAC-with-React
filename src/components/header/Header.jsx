@@ -1,14 +1,16 @@
-import React from "react";
-import "./Header.css";
-import logo from "../images/icons/7777.png";
-import SearchIcon from "@material-ui/icons/Search";
-import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
-import { Link } from "react-router-dom";
-import { useStateValue } from "../../StateProvider";
-import { auth } from "../../firebase";
+import React from 'react';
+import './Header.css';
+import logo from '../images/icons/7777.png';
+import SearchIcon from '@material-ui/icons/Search';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import { Link } from 'react-router-dom';
+import { useStateValue } from '../../StateProvider';
+import { auth } from '../../firebase';
 
 function Header(authUser) {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const { basket, user } = useStateValue();
+
+  // debugger
 
   const handleAuthentication = () => {
     if (user) {
@@ -28,7 +30,7 @@ function Header(authUser) {
           <SearchIcon className="search-icon" />
         </div>
         <div className="header-nav">
-          <Link className="link" to={!user && "/login"}>
+          <Link className="link" to={!user && '/login'}>
             <div onClick={handleAuthentication} className="header-option">
               <span className="line-1">
                 {user ? `Hello ${user.email}` : `Hello Guest`}

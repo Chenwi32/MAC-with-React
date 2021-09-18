@@ -1,17 +1,13 @@
-import React, { useState } from "react";
-import CurrencyFormat from "react-currency-format";
-import { Link } from "react-router-dom";
-import { getBasketTotal } from "../../reducer";
-import { useStateValue } from "../../StateProvider";
-import CheckoutProduct from "./CheckoutProduct";
-import "./Payment.css";
+import React from 'react';
+import CurrencyFormat from 'react-currency-format';
+import { Link } from 'react-router-dom';
+import { getBasketTotal } from '../../reducer';
+import { useStateValue } from '../../StateProvider';
+import CheckoutProduct from './CheckoutProduct';
+import './Payment.css';
 
 function Payment() {
-  const [{ basket, user }, dispatch] = useStateValue();
-
-  const [succeeded, setSucceeded] = useState(false);
-  const [processing, setProcessing] = useState("");
-  const [disabled, setDisabled] = useState(true);
+  const { basket, user } = useStateValue();
 
   return (
     <div className="payment container">
@@ -22,7 +18,7 @@ function Payment() {
         <div className="payment__section delivery flex">
           <h3>Delivery Adress</h3>
           <small className="adress">
-            <p>{user ? user.email : "Customer"}</p>
+            <p>{user ? user.email : 'Customer'}</p>
             <p>Yauonde-Cameroon</p>
             <p>Nsimeyong-Rue-Damas</p>
           </small>
@@ -30,8 +26,9 @@ function Payment() {
         <div className="payment__section flex">
           <h3>Review items and delivery</h3>
           <div className="pament__items flex__col">
-            {basket.map((item) => (
+            {basket.map((item, index) => (
               <CheckoutProduct
+                key={index}
                 id={item.id}
                 title={item.title}
                 image={item.image}
@@ -50,7 +47,7 @@ function Payment() {
               <small>lnksds djd</small>
             </div>
             <p>
-              Order Total:{" "}
+              Order Total:{' '}
               <CurrencyFormat
                 renderText={(value) => (
                   <>
@@ -61,16 +58,13 @@ function Payment() {
                 )}
                 decimalScale={2}
                 value={getBasketTotal(basket)}
-                displayType={"text"}
+                displayType={'text'}
                 thousandSeparator={true}
-                prefix={"FCFA"}
+                prefix={'FCFA'}
               />
             </p>
-            <button
-              className="btn"
-              disabled={processing || disabled || succeeded}
-            >
-              {processing ? <p>Processing</p> : "Buy now"}
+            <button className="btn" disabled="false">
+              Buy now
             </button>
           </div>
         </div>

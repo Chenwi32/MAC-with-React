@@ -1,27 +1,21 @@
-import React from "react";
-import "./Home.css";
+import React from 'react';
+import './Home.css';
 import {
   banner,
-  banner1,
-  banner2,
-  banner3,
   product_1,
   product_2,
   product_3,
   product_6,
   product_11,
   product_8,
-} from "../images/imageindex";
-import Product from "../product/Product";
-import { animateText } from "../..";
+} from '../images/imageindex';
+import Product from '../product/Product';
 
 function Home() {
-  /*///////// Animate Text //////////*/
 
   return (
     <div className="home">
-      {/*//////// Banner /////////*/}
-      <div class="banner-container flex__col">
+      <div className="banner-container flex__col">
         <div className="bannerImg__container">
           <img src={banner} alt="" className="banner" />
         </div>
@@ -36,10 +30,10 @@ function Home() {
               <strong>Give The African Style A Try!</strong>
             </p>
             <div id="animated__text" className="animated__text"></div>
-            <span class="feel hide" id="feel">
+            <span className="feel hide" id="feel">
               <strong>“FEEL THE ROYALTY”</strong>
             </span>
-            <span class="hide" id="priority">
+            <span className="hide" id="priority">
               <strong>
                 <em>Your Satisfaction, Our Priority!</em>
               </strong>
@@ -47,13 +41,12 @@ function Home() {
           </div>
 
           <div className="button">
-            <button class="btn">SHOP NOW</button>
+            <button className="btn">SHOP NOW</button>
           </div>
         </div>
       </div>
 
       <div className="home-container container">
-        {/*///////// Products /////////////*/}
         <div className="one__row flex">
           <Product
             title="Decoration Stand"

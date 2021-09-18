@@ -5,7 +5,6 @@
   height: max-content;
 }
 
-/*/////// Checkout Styles ///////*/
 .checkout__left {
   flex: 1;
   margin-right: 0.5rem;
@@ -18,8 +17,8 @@
 }
 
 .checkout__title::before {
-  content: "\e613";
-  font-family: "jw-icons";
+  content: '\e613';
+  font-family: 'jw-icons';
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
