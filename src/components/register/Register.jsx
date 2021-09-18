@@ -1,35 +1,32 @@
-import React, { useState } from "react";
-import "../login/Login.css";
-import logo from "../images/icons/7777.png";
-import { Link, useHistory } from "react-router-dom";
-import { auth } from "../../firebase";
+import React, { useState } from 'react';
+import '../login/Login.css';
+import logo from '../images/icons/7777.png';
+import { Link, useHistory } from 'react-router-dom';
+import { auth } from '../../firebase';
 
 function Register() {
   const history = useHistory();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
 
   const register = (event) => {
     event.preventDefault();
 
     // Firebase Functionality
-
     auth
       .createUserWithEmailAndPassword(email, password)
-
       .then((auth) => {
-        console.log(auth);
         if (auth) {
-          history.push("/");
+          history.push('/');
         }
       })
       .catch((error) => alert(error.message));
   };
 
   const toLogin = () => {
-    history.push("/login");
+    history.push('/login');
   };
 
   return (
@@ -47,7 +44,7 @@ function Register() {
             <input
               className="input"
               type="text"
-              /* This ties the useState to this input field */
+              // This ties the useState to this input field
               value={firstName}
               onChange={(event) => setFirstName(event.target.value)}
             />
@@ -57,7 +54,7 @@ function Register() {
             <input
               className="input"
               type="text"
-              /* This ties the useState to this input field */
+              // This ties the useState to this input field
               value={lastName}
               onChange={(event) => setLastName(event.target.value)}
             />
@@ -67,7 +64,7 @@ function Register() {
             <input
               className="input"
               type="email"
-              /* This ties the useState to this input field */
+              // This ties the useState to this input field
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
@@ -87,10 +84,9 @@ function Register() {
           </button>
 
           <p>
-            By signing in, you agree to the MAfriculture
-            <a href="#"> use</a> and <a href="#">sale</a> policies. Please see our
-            <a href="#"> Privacy</a> notice, <a href="#">Cookies</a> notice and
-            our <a href="#">Interest-Based Ads</a> notice
+            By signing in, you agree to the MAfriculture use and sale policies.
+            Please see our Privacy notice, Cookies notice and our Interest-Based
+            Ads notice
           </p>
           <p className="create__notice">You already have an account?</p>
           <button className="register" onClick={toLogin}>

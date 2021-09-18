@@ -1,14 +1,13 @@
-import React from "react";
-import "./Product.css";
-import { product_1 } from "../images/imageindex";
-import { useStateValue } from "../../StateProvider";
+import React from 'react';
+import './Product.css';
+import { useStateValue } from '../../StateProvider';
 
 function Product({ id, title, image, price, rating }) {
-  const [{ basket }, dispatch] = useStateValue();
+  const dispatch = useStateValue();
 
   const addToCart = () => {
     dispatch({
-      type: "ADD_TO_CART",
+      type: 'ADD_TO_CART',
       item: {
         id: id,
         title: title,
@@ -32,7 +31,7 @@ function Product({ id, title, image, price, rating }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p className="rating__stars">&#x2B50;</p>
+              <p className="rating__stars" key={i}>&#x2B50;</p>
             ))}
         </div>
       </div>
