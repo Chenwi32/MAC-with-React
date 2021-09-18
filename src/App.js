@@ -1,24 +1,78 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/header/Header';
+import Home from './components/home/Home';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Checkout from './components/checkout/Checkout';
+import Login from './components/login/Login';
+import { useEffect } from 'react';
+import { auth } from './firebase';
+import { useStateValue } from './StateProvider';
+import Payment from './components/checkout/Payment';
+import Register from './components/register/Register';
+import Footer from './components/footer/Footer';
+import Products from './components/productsPage/Products';
 
 function App() {
+  const dispatch = useStateValue()[1];
+  // debugger
+
+  // This will run only once when the app loads since we included the empty square brackets as a second parameter to this useEffect
+  useEffect(() => {
+    // So this keeps listening and acting when the user logs in or out, or depending on what we will put in the square brackets below
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        // The user just logged in or the user was logged in
+        dispatch({
+          type: 'SET_USER',
+          user: authUser,
+        });
+      } else {
+        // The user is logged out
+        dispatch({
+          type: 'SET_USER',
+          user: null,
+        });
+      }
+    });
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Switch>
+          <Route path="/register">
+            <Register />
+          </Route>
+
+          <Route path="/login">
+            <Login />
+          </Route>
+
+          <Route path="/checkout">
+            <Header />
+            <Checkout />
+            <Footer />
+          </Route>
+
+          <Route path={'/payment'}>
+            <Header />
+            <Payment />
+            <Footer />
+          </Route>
+
+          <Route path="/products">
+            <Header />
+            <Products />
+            <Footer />
+          </Route>
+
+          <Route path="/">
+            <Header />
+            <Home />
+            <Footer />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
