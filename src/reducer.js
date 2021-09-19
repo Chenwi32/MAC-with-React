@@ -34,7 +34,7 @@ const reducer = (state = initialState, action) => {
       };
     // Second case, if the action is SET_USER
     case 'SET_USER':
-      debugger
+      // debugger
       return {
         ...state,
         user: action.user,

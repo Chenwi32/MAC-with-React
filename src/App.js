@@ -19,6 +19,7 @@ function App() {
   useEffect(() => {
     // So this keeps listening and acting when the user logs in or out, or depending on what we will put in the square brackets below
     auth.onAuthStateChanged((authUser) => {
+      // debugger
       if (authUser) {
         // The user just logged in or the user was logged in
         dispatch({

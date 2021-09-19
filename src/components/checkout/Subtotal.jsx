@@ -8,7 +8,7 @@ import { useHistory } from 'react-router-dom';
 function Subtotal() {
   const history = useHistory();
 
-  const { basket } = useStateValue();
+  const { basket } = useStateValue()[0];
 
   return (
     <div className="subtotal flex__col">
@@ -18,10 +18,6 @@ function Subtotal() {
             <p className="subtotal__value">
               Subtotal ({basket?.length} items): <strong>{value}</strong>
             </p>
-            <small className="subtotal__gift">
-              <input type="checkbox" />
-              This order contains a gift
-            </small>
           </>
         )}
         decimalScale={2}
