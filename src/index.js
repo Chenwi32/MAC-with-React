@@ -89,7 +89,7 @@ const toggleBtn = document.querySelector(".toggle__icon");
 const menu = document.querySelector(".mobile__header__nav");
 const overlay = document.querySelector(".overlay");
 
-toggleBtn.addEventListener("click", () => {
+const toggle = () => {
   if (menu.classList.contains("slide")) {
     menu.classList.remove("slide");
     overlay.classList.remove("hide");
@@ -97,7 +97,10 @@ toggleBtn.addEventListener("click", () => {
     menu.classList.add("slide");
     overlay.classList.add("hide");
   }
-});
+};
+
+toggleBtn.addEventListener("click", () => toggle());
+overlay.addEventListener("click", () => toggle());
 
 window.onload = () => {
   animateText();
