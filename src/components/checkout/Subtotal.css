@@ -10,18 +10,7 @@
 }
 
 .subtotal__value {
-  margin-bottom: 1rem;
   margin-top: 0;
-}
-
-.subtotal__gift,
-.subtotal__value {
-  width: 100%;
-  text-align: left;
-}
-
-.subtotal__gift input {
-  margin-right: 0.5rem;
 }
 
 .subtotal .btn {

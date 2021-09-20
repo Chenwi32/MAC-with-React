@@ -7,7 +7,7 @@ import CheckoutProduct from './CheckoutProduct';
 import './Payment.css';
 
 function Payment() {
-  const { basket, user } = useStateValue();
+  const { basket, user } = useStateValue()[0];
 
   return (
     <div className="payment container">
@@ -60,10 +60,10 @@ function Payment() {
                 value={getBasketTotal(basket)}
                 displayType={'text'}
                 thousandSeparator={true}
-                prefix={'FCFA'}
+                prefix={'XAF'}
               />
             </p>
-            <button className="btn" disabled="false">
+            <button className="btn" disabled={false}>
               Buy now
             </button>
           </div>
