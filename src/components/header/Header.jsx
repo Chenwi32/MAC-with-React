@@ -1,10 +1,10 @@
-import React from 'react';
-import './Header.css';
-import logo from '../images/icons/7777.png';
-import { Search, Menu, AddShoppingCart } from '@mui/icons-material';
-import { Link } from 'react-router-dom';
-import { useStateValue } from '../../StateProvider';
-import { auth } from '../../firebase';
+import React from "react";
+import "./Header.css";
+import logo from "../images/icons/7777.png";
+import { Search, Menu, AddShoppingCart } from "@mui/icons-material";
+import { Link } from "react-router-dom";
+import { useStateValue } from "../../StateProvider";
+import { auth } from "../../firebase";
 
 function Header(authUser) {
   const { basket, user } = useStateValue()[0];
@@ -34,7 +34,7 @@ function Header(authUser) {
               className="link"
               to={(location) => ({
                 ...location,
-                pathname: !user && '/login',
+                pathname: !user && "/login",
               })}
             >
               <div onClick={handleAuthentication} className="header-option">
@@ -73,32 +73,6 @@ function Header(authUser) {
           </Link>
 
           <div className="header-nav ">
-            <div className="mobile__header__nav slide">
-              <Link
-                className="link"
-                to={(location) => ({
-                  ...location,
-                  pathname: !user && '/login',
-                })}
-              >
-                <div onClick={handleAuthentication} className="header-option">
-                  <span className="line-2">
-                    {user ? `Sign Out` : `Sign In`}
-                  </span>
-                </div>
-              </Link>
-
-              <Link className="link" to="/products">
-                <div className="header-option">
-                  <span className="line-2">Store</span>
-                </div>
-              </Link>
-
-              <div className="header-option">
-                <span className="line-2">About Us</span>
-              </div>
-            </div>
-
             <Link className="link" to="/checkout">
               <div className="card-icon menu__icons">
                 <span className="items-inCart">{basket?.length}</span>
@@ -109,6 +83,35 @@ function Header(authUser) {
               <Menu />
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="overlay hide"></div>
+      <div className="mobile__header__nav slide">
+        <Link
+          className="link"
+          to={(location) => ({
+            ...location,
+            pathname: !user && "/login",
+          })}
+        >
+          <div onClick={handleAuthentication} className="header-option">
+            <span className="line-1">
+              {user ? `Hello ${user.email}` : `Hello Guest`}
+            </span>
+
+            <span className="line-2">{user ? `Sign Out` : `Sign In`}</span>
+          </div>
+        </Link>
+
+        <Link className="link" to="/products">
+          <div className="header-option">
+            <span className="line-2">Store</span>
+          </div>
+        </Link>
+
+        <div className="header-option">
+          <span className="line-2">About Us</span>
         </div>
       </div>
     </React.Fragment>
