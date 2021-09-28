@@ -80,8 +80,26 @@ const animateImages = () => {
     } else {
       bannerImg.src = banner;
     }
-  }, 9000);
+  }, 50000);
 };
+
+/*///////// Show Search Bar //////////*/
+const searchBar = document.querySelector(".header__search");
+const searchOption = document.querySelector("#search");
+const searchBtn = document.querySelector(".search__icon");
+
+const toggleSearch = () => {
+  if (searchBar.classList.contains("hide")) {
+    searchBar.classList.remove("hide");
+    searchOption.classList.add("hide");
+  } else {
+    searchBar.classList.add("hide");
+    searchOption.classList.remove("hide");
+  }
+};
+searchOption.addEventListener("click", () => toggleSearch());
+
+searchBtn.addEventListener("click", () => toggleSearch());
 
 /*///////// Menu Toggle /////////*/
 

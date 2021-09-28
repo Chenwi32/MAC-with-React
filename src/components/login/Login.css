@@ -1,5 +1,5 @@
 .login {
-  width: 80%;
+  width: 60%;
   margin: 1rem auto;
   background-color: #bec2c2;
   align-items: center;
@@ -10,13 +10,17 @@
 }
 
 .logo {
-  width: 40%;
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }
+
 .login img {
   object-fit: contain;
-  padding: 0.5rem 1.5rem;
-  width: 40%;
+  padding: 0.8rem 0.3rem;
+  width: 20%;
   margin: auto;
+  background-color: #fff;
   /*   background-color: #131313fd; */
 }
 

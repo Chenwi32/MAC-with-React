@@ -3,6 +3,14 @@ import banner1 from "./banner3.png";
 import banner2 from "./banner1.png";
 import banner3 from "./banner2.png";
 
+import team_1 from "./Team/founder.png";
+import team_2 from "./Team/team-1.jpg";
+import team_3 from "./Team/team-2.jpg";
+import team_4 from "./Team/team-3.jpg";
+import team_5 from "./Team/team-4.jpg";
+import team_6 from "./Team/team-5.jpg";
+import team_7 from "./Team/team-6.jpg";
+
 import product_1 from "./product_1.1.png";
 import product_2 from "./product_2.png";
 import product_3 from "./product_3.png";
@@ -37,4 +45,11 @@ export {
   product_12,
   product_13,
   product_14,
+  team_1,
+  team_2,
+  team_3,
+  team_4,
+  team_5,
+  team_6,
+  team_7,
 };
