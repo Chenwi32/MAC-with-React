@@ -50,7 +50,7 @@ function Header(authUser) {
 
             <Link className="link">
               <div className="header__option">
-                <span className="line__2">Galery</span>
+                <span className="line__2">Gallery</span>
               </div>
             </Link>
 

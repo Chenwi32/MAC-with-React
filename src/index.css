@@ -34,7 +34,7 @@ code {
 /*////////////// Utilities ///////// */
 
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
 }
 
@@ -129,6 +129,6 @@ code {
   border-top: 1px solid rgb(236, 31, 4);
   width: fit-content;
 
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   margin-top: 1rem;
 }

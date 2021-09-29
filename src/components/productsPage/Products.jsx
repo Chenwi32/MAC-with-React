@@ -1,8 +1,10 @@
-import React from 'react';
-import Product from '../product/Product';
-import '../product/Product.css';
-import './Products.css';
-import '../home/Home.css';
+import React from "react";
+import Product from "../product/Product";
+import "../product/Product.css";
+
+import "../home/Home.css";
+import "./Products.css";
+
 import {
   product_1,
   product_2,
@@ -16,7 +18,7 @@ import {
   product_10,
   product_11,
   product_13,
-} from '../images/imageindex';
+} from "../images/imageindex";
 
 function Products() {
   return (
