@@ -59,22 +59,6 @@ function Header(authUser) {
             </div>
 
             <div className="user">
-              <Link
-                className="link"
-                to={(location) => ({
-                  ...location,
-                  pathname: !user && "/login",
-                })}
-              >
-                <div
-                  onClick={handleAuthentication}
-                  className="header__option user__menu flex"
-                >
-                  <span className="line__2">
-                    {user ? `Hello ${user.email}` : `Sign In`}
-                  </span>
-                </div>
-              </Link>
               <div className="user__options flex__col hide">
                 <span className="line__2">{user ? `Sign Out` : `Sign In`}</span>
                 <span className="line__2">Dashboard</span>
@@ -86,6 +70,23 @@ function Header(authUser) {
               <div className="card__icon">
                 <span className="items__inCart">{basket?.length}</span>
                 <AddShoppingCart />
+              </div>
+            </Link>
+
+            <Link
+              className="link"
+              to={(location) => ({
+                ...location,
+                pathname: !user && "/login",
+              })}
+            >
+              <div
+                onClick={handleAuthentication}
+                className="header__option user__menu flex btn2"
+              >
+                <span className="line__2">
+                  {user ? `Hello ${user.email}` : `Sign In`}
+                </span>
               </div>
             </Link>
           </div>

@@ -10,17 +10,17 @@
 }
 
 .main {
-  width: 70%;
+  width: 100%;
   padding: 2rem 0rem 2rem 1rem;
 }
 
-.side {
+/* .side {
   width: 28%;
   height: 100vh;
   background-color: #46474727;
   position: sticky;
   top: 0;
-}
+} */
 
 .banner-container {
   height: 70vh;
@@ -169,15 +169,51 @@
   font-size: 1.3em;
   margin: 1rem;
 }
+.team {
+  position: relative;
+  padding-left: 3rem;
+}
 
 .member {
   margin: 1.5rem 0rem 0;
   padding: 0 2rem 0 0;
   height: 200px;
-  width: 90%;
+  width: 60%;
 
   border-radius: 10px;
-  box-shadow: 1px 2px 3px 3px rgba(0, 0, 0, 0.069);
+  box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.144);
+  position: absolute;
+  transition: 0.7s;
+  transition-delay: 1s all;
+}
+
+.member:hover
+/* .member:hover */ {
+  z-index: 5;
+  top: 0;
+  left: 3rem;
+}
+
+.member__1 {
+  z-index: 4;
+}
+
+.member__2 {
+  right: 23rem;
+  top: 2rem;
+  z-index: 3;
+}
+
+.member__3 {
+  right: 20rem;
+  top: 4rem;
+  z-index: 2;
+}
+
+.member__4 {
+  right: 17rem;
+  top: 6rem;
+  z-index: 1;
 }
 
 .member__image-container {
@@ -198,7 +234,7 @@
   justify-content: space-between;
   margin: 0;
   padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.589);
+  background-color: rgb(255, 255, 255);
   color: #464747dc;
 }
 
@@ -216,14 +252,15 @@
   font-weight: 600;
   color: rgba(236, 31, 4, 0.74);
   width: 100%;
-  text-align: right;
+  /* text-align: right; */
 
   margin-top: 0.2rem;
+  margin-right: 2rem;
 }
 
 .cta__title {
-  margin: auto;
-  margin-top: 7rem;
+  margin: 8rem auto 0;
+  margin-top: 35rem;
   padding-top: 0.8rem;
   width: 50%;
   text-align: center;

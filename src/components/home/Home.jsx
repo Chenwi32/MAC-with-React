@@ -228,7 +228,7 @@ function Home() {
             </p>
             <h3 className="title ">Meet the team commited to serve you</h3>
             <div className="team">
-              <div className="member flex">
+              <div className="member flex member__1">
                 <div className="member__image-container">
                   <img className="member__image" src={team_1} alt="" />
                 </div>
@@ -245,7 +245,7 @@ function Home() {
                 </div>
               </div>
 
-              <div className="member flex">
+              <div className="member flex member__2">
                 <div className="member__image-container">
                   <img className="member__image" src={team_2} alt="" />
                 </div>
@@ -261,7 +261,7 @@ function Home() {
                   <p className="member__name">Eddie Seif</p>
                 </div>
               </div>
-              <div className="member flex">
+              <div className="member flex member__3">
                 <div className="member__image-container">
                   <img className="member__image" src={team_3} alt="" />
                 </div>
@@ -277,7 +277,7 @@ function Home() {
                   <p className="member__name">Irene Ekoti</p>
                 </div>
               </div>
-              <div className="member flex">
+              <div className="member flex member__4">
                 <div className="member__image-container">
                   <img className="member__image" src={team_4} alt="" />
                 </div>
@@ -307,13 +307,11 @@ function Home() {
                 vel perspiciatis quasi ex quam non aliquid nam cum dicta beatae
                 delectus quidem quod corrupti saepe.
               </p>
-
-              <div className="team"></div>
             </div>
           </div>
         </div>
 
-        <div className="side"></div>
+        {/* <div className="side"></div> */}
       </div>
     </div>
   );
