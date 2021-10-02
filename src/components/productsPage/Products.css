@@ -1,3 +1,8 @@
+.products__container {
+  background-color: rgba(255, 255, 255, 0.692);
+  padding: 1.5rem;
+}
+
 @media (max-width: 700px) {
   .products__container .grid__3 {
     grid-template-columns: repeat(1, 1fr);
