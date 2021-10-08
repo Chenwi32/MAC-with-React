@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
 import {
-  banner,
   product_1,
   product_2,
   product_3,
@@ -18,39 +17,36 @@ import Product from "../product/Product";
 function Home() {
   return (
     <div className="home">
-      <div className="banner-container flex__col">
-        <div className="bannerImg__container">
-          <img src={banner} alt="" className="banner" />
-        </div>
-        <div className="container">
-          <h1 id="backToTop">MAfriculture</h1>
+      <div className="home-container container flex__col">
+        <div className="banner-container flex__col banner">
+          <div className="banner">
+            <h1 id="backToTop">MAfriculture</h1>
 
-          <div className="quotes">
-            <p>
-              There Is Beauty In Everything — <br />
-              African Fashion Is Never An Exception.
-              <br />
-              <strong>Give The African Style A Try!</strong>
-            </p>
-            <div id="animated__text" className="animated__text"></div>
-            <span className="feel hide" id="feel">
-              <strong>“FEEL THE ROYALTY”</strong>
-            </span>
-            <span className="hide" id="priority">
-              <strong>
-                <em>Your Satisfaction, Our Priority!</em>
-              </strong>
-            </span>
+            <div className="quotes">
+              <p>
+                There Is Beauty In Everything — <br />
+                African Fashion Is Never An Exception.
+                <br />
+                <strong>Give The African Style A Try!</strong>
+              </p>
+              <div id="animated__text" className="animated__text"></div>
+              <span className="feel hide" id="feel">
+                <strong>“FEEL THE ROYALTY”</strong>
+              </span>
+              <span className="hide" id="priority">
+                <strong>
+                  <em>Your Satisfaction, Our Priority!</em>
+                </strong>
+              </span>
+            </div>
+
+            <div className="buttons flex">
+              <button className="btn banner__btn">Shop Now</button>
+              <button className="btn2 banner__btn">Sign Up</button>
+            </div>
           </div>
-
-          <div className="buttons flex">
-            <button className="btn banner__btn">Shop Now</button>
-            <button className="btn2 banner__btn">Sign Up</button>
-          </div>
         </div>
-      </div>
 
-      <div className="home-container container flex">
         <div className="main">
           <div className="intro">
             <h2>
@@ -226,7 +222,7 @@ function Home() {
               consequatur odio ipsa velit dolorem quam corrupti rerum rem libero
               itaque numquam ipsam delectus illo vel magnam dicta?
             </p>
-            <h3 className="title ">Meet the team commited to serve you</h3>
+            <h3 className="title2 ">Meet the team commited to serve you</h3>
             <div className="team">
               <div className="member flex member__1">
                 <div className="member__image-container">
@@ -295,7 +291,7 @@ function Home() {
               </div>
             </div>
 
-            <h2 className="title cta__title">Sign up here</h2>
+            <h3 className="title2 cta__title">Sign up here</h3>
 
             <div className="cta">
               <p className="cta__p">
@@ -310,8 +306,6 @@ function Home() {
             </div>
           </div>
         </div>
-
-        {/* <div className="side"></div> */}
       </div>
     </div>
   );

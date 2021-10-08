@@ -26,37 +26,29 @@ function Header(authUser) {
           </Link>
 
           <div className="header-nav">
-            <div className="header__option" id="search">
+            <Link className="link header__option" id="search">
               <span className="line__2">Search</span>
-            </div>
-
-            <Link className="link" to="/products">
-              <div className="header__option">
-                <span className="line__2">Store</span>
-              </div>
             </Link>
 
-            <Link className="link">
-              <div className="header__option">
-                <span className="line__2">Category</span>
-              </div>
+            <Link className="link header__option" to="/products">
+              <span className="line__2">Store</span>
             </Link>
 
-            <Link className="link">
-              <div className="header__option">
-                <span className="line__2">Blog</span>
-              </div>
+            <Link className="link header__option">
+              <span className="line__2">Category</span>
             </Link>
 
-            <Link className="link">
-              <div className="header__option">
-                <span className="line__2">Gallery</span>
-              </div>
+            <Link className="link header__option">
+              <span className="line__2">Blog</span>
             </Link>
 
-            <div className="header__option">
+            <Link className="link header__option">
+              <span className="line__2">Gallery</span>
+            </Link>
+
+            <Link className="link header__option">
               <span className="line__2">About Us</span>
-            </div>
+            </Link>
 
             <div className="user">
               <div className="user__options flex__col hide">
@@ -102,7 +94,7 @@ function Header(authUser) {
 
       <div className="mobile__header ">
         <div className="header__container container">
-          <Link to="/">
+          <Link className="logo__link" to="/">
             <img src={logo} className="logo" alt="logo" />
           </Link>
 
