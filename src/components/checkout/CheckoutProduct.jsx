@@ -1,13 +1,13 @@
-import React from 'react';
-import { useStateValue } from '../../StateProvider';
-import './CheckoutProduct.css';
+import React from "react";
+import { useStateValue } from "../../StateProvider";
+import "./CheckoutProduct.css";
 
 function CheckoutProduct({ id, image, title, price, rating }) {
   const dispatch = useStateValue()[1];
   const removeFromCart = () => {
     // Remove Item
     dispatch({
-      type: 'REMOVE_FROM_CART',
+      type: "REMOVE_FROM_CART",
       id: id,
     });
   };
@@ -23,12 +23,14 @@ function CheckoutProduct({ id, image, title, price, rating }) {
             {Array(rating)
               .fill()
               .map((_, i) => (
-                <p className="rating__stars" key={i}>&#x2B50;</p>
+                <p className="rating__stars" key={i}>
+                  &#x2B50;
+                </p>
               ))}
           </div>
         </div>
 
-        <button onClick={removeFromCart} className="btn">
+        <button onClick={removeFromCart} className="btn2">
           Remove from Cart
         </button>
       </div>

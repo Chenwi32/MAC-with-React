@@ -6,13 +6,13 @@ import reducer, { initialState } from "./reducer";
 import App from "./App";
 import "./index.css";
 
-import {
+/* import {
   banner,
   banner1,
   banner2,
   banner3,
 } from "./components/images/imageindex";
-
+ */
 ReactDOM.render(
   <React.StrictMode>
     {/* We wrap the app with the StateProvider that we created so that every component will have access to the Data layer */}
@@ -63,7 +63,7 @@ const animateText = () => {
     }
   }, 6000);
 };
-/*/////// Banner Animated Images ///////*/
+/* //////// Banner Animated Images ///////
 const animateImages = () => {
   const bannerImg = document.querySelector(".banner");
   bannerImg.src = banner;
@@ -81,7 +81,7 @@ const animateImages = () => {
       bannerImg.src = banner;
     }
   }, 50000);
-};
+}; */
 
 /*///////// Show Search Bar //////////*/
 const searchBar = document.querySelector(".header__search");
@@ -122,5 +122,5 @@ overlay.addEventListener("click", () => toggle());
 
 window.onload = () => {
   animateText();
-  animateImages();
+  /* animateImages(); */
 };
