@@ -26,27 +26,23 @@ function Header(authUser) {
           </Link>
 
           <div className="header-nav">
-            <Link className="link header__option" id="search">
+            {/* <Link className="link header__option" id="search">
               <span className="line__2">Search</span>
-            </Link>
+            </Link> */}
 
             <Link className="link header__option" to="/products">
               <span className="line__2">Store</span>
             </Link>
 
-            <Link className="link header__option">
-              <span className="line__2">Category</span>
-            </Link>
-
-            <Link className="link header__option">
+            <Link className="link header__option" to="/blog">
               <span className="line__2">Blog</span>
             </Link>
 
-            <Link className="link header__option">
+            <Link className="link header__option" to="/gallery">
               <span className="line__2">Gallery</span>
             </Link>
 
-            <Link className="link header__option">
+            <Link className="link header__option" to="/aboutus">
               <span className="line__2">About Us</span>
             </Link>
 
@@ -58,32 +54,25 @@ function Header(authUser) {
               </div>
             </div>
 
-            <Link className="link" to="/checkout">
-              <div className="card__icon">
-                <span className="items__inCart">{basket?.length}</span>
-                <AddShoppingCart />
-              </div>
+            <Link className="link card__icon" to="/checkout">
+              <span className="items__inCart">{basket?.length}</span>
+              <AddShoppingCart />
             </Link>
 
             <Link
-              className="link"
+              className="link header__option user__menu flex btn2"
               to={(location) => ({
                 ...location,
                 pathname: !user && "/login",
               })}
+              onClick={handleAuthentication}
             >
-              <div
-                onClick={handleAuthentication}
-                className="header__option user__menu flex btn2"
-              >
-                <span className="line__2">
-                  {user ? `Hello ${user.email}` : `Sign In`}
-                </span>
-              </div>
+              <span className="line__2">
+                {user ? `Hello ${user.email}` : `Sign In`}
+              </span>
             </Link>
           </div>
         </div>
-
         <div className="header__search container hide">
           <input className="search__input" type="text" />
           <Search className="search__icon" />
@@ -99,11 +88,13 @@ function Header(authUser) {
           </Link>
 
           <div className="header-nav ">
-            <Link className="link" to="/checkout">
-              <div className="card__icon menu__icons">
-                <span className="items__inCart">{basket?.length}</span>
-                <AddShoppingCart />
-              </div>
+            {/* <Link className="link header__option search" id="search">
+              <Search className="search__icon" />
+            </Link> */}
+
+            <Link className="link card__icon menu__icons" to="/checkout">
+              <span className="items__inCart">{basket?.length}</span>
+              <AddShoppingCart />
             </Link>
             <div className="menu__icons toggle__icon">
               <Menu />
@@ -115,29 +106,39 @@ function Header(authUser) {
       <div className="overlay hide"></div>
       <div className="mobile__header__nav slide">
         <Link
-          className="link"
           to={(location) => ({
             ...location,
             pathname: !user && "/login",
           })}
+          className="link header__option"
+          onClick={handleAuthentication}
         >
-          <div onClick={handleAuthentication} className="header__option">
-            <span className="line__1">
-              {user ? `Hello ${user.email}` : `Hello Guest`}
-            </span>
+          <span className="line__1">
+            {user ? `Hello ${user.email}` : `Hello Guest`}
+          </span>
 
-            <span className="line__2">{user ? `Sign Out` : `Sign In`}</span>
-          </div>
+          <span className="line__2">{user ? `Sign Out` : `Sign In`}</span>
         </Link>
 
-        <Link className="link" to="/products">
-          <div className="header__option">
-            <span className="line__2">Store</span>
-          </div>
+        <Link className=" header__option" to="/products">
+          <span className="line__2">Store</span>
         </Link>
 
-        <div className="header__option">
+        <Link className=" header__option" to="/blog">
+          <span className="line__2">Blog</span>
+        </Link>
+
+        <Link className="link header__option" to="/gallery">
+          <span className="line__2">Gallery</span>
+        </Link>
+
+        <Link className=" header__option" to="/aboutus">
           <span className="line__2">About Us</span>
+        </Link>
+
+        <div className="header__search container hide">
+          <input className="search__input" type="text" />
+          <Search className="search__icon" />
         </div>
       </div>
     </React.Fragment>

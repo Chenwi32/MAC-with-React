@@ -1,0 +1,36 @@
+.products__breadcromes {
+  background-color: rgba(236, 31, 4, 0.863);
+  margin: 1rem 0.3rem;
+}
+
+.products__breadcromes-ul {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.products__breadcromes-options {
+  padding: 0.1rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  transition: 0.7s ease-in;
+  font-weight: 600;
+  color: #fff;
+}
+.products__breadcromes-options:hover {
+  border-bottom: solid 1px;
+}
+
+@media (max-width: 700px) {
+  .products__breadcromes-options {
+    padding: 0.1rem 0;
+    margin-right: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .products__breadcromes-options {
+    font-size: 0.75em;
+    padding: 0.1rem 0;
+    margin-right: 0.75rem;
+  }
+}

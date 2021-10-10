@@ -1,6 +1,10 @@
 .checkoutProduct {
   margin: 1.2rem;
-  background-color: rgba(66, 65, 65, 0.206);
+  background: linear-gradient(
+    to bottom,
+    rgba(204, 34, 4, 0.267),
+    rgba(199, 28, 5, 0.103)
+  );
   padding: 1rem;
   height: 200px;
   justify-content: space-between;
@@ -15,14 +19,17 @@
   min-height: 150px;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  color: #000000;
   flex-direction: row;
   width: 70%;
   padding-right: 1rem;
+  font-size: 1.2em;
+  line-height: 1.5;
 }
 
-.info .btn {
+.info .btn2 {
   height: fit-content;
+  font-size: 1em;
 }
 
 @media (max-width: 840px) {
