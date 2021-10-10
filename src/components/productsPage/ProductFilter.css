@@ -1,0 +1,16 @@
+.filter {
+  justify-content: center;
+}
+
+.filter__option {
+  outline: none;
+  border: none;
+  background-color: inherit;
+  padding: 0.5rem;
+  margin-right: 0.2rem;
+  font-size: 1em;
+  color: #444545;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 1px solid;
+}

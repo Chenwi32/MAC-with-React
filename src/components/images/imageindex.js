@@ -26,6 +26,18 @@ import product_12 from "./product_11.1.png";
 import product_13 from "./product_2.3.png";
 import product_14 from "./product_2.1.png";
 
+import product_15 from "./dress-1.png";
+import product_16 from "./dress-2.png";
+import product_17 from "./dress-3.png";
+import product_18 from "./dress-4.png";
+
+import product_19 from "./ankara-fabrics-1.png";
+import product_20 from "./ankara-fabrics-2.png";
+import product_21 from "./ankara-fabrics-3.png";
+import product_22 from "./ankara-fabrics-4.png";
+import product_23 from "./ankara-fabrics-5.png";
+import product_24 from "./vase-2.png";
+
 export {
   banner,
   banner1,
@@ -45,6 +57,16 @@ export {
   product_12,
   product_13,
   product_14,
+  product_15,
+  product_16,
+  product_17,
+  product_18,
+  product_19,
+  product_20,
+  product_21,
+  product_22,
+  product_23,
+  product_24,
   team_1,
   team_2,
   team_3,

@@ -13,8 +13,12 @@ import {
   team_4,
 } from "../images/imageindex";
 import Product from "../product/Product";
+import BottomAds from "../bottomAds/BottomAds";
+import { useHistory } from "react-router";
 
 function Home() {
+  const history = useHistory();
+
   return (
     <div className="home">
       <div className="home-container container flex__col">
@@ -41,7 +45,12 @@ function Home() {
             </div>
 
             <div className="buttons flex">
-              <button className="btn banner__btn">Shop Now</button>
+              <button
+                className="btn banner__btn"
+                onClick={(event) => history.push("/products")}
+              >
+                Shop Now
+              </button>
               <button className="btn2 banner__btn">Sign Up</button>
             </div>
           </div>
@@ -303,8 +312,27 @@ function Home() {
                 vel perspiciatis quasi ex quam non aliquid nam cum dicta beatae
                 delectus quidem quod corrupti saepe.
               </p>
+              <form action="" className="cta__form flex">
+                <div className="cta__input-container flex__col">
+                  <label className="cta__label" htmlFor="username">
+                    Username:
+                  </label>
+                  <input type="text" className="cta__input" />
+
+                  <label className="cta__label" htmlFor="email">
+                    Email:
+                  </label>
+                  <input type="email" className="cta__input" />
+                </div>
+                <div className="cta__button flex">
+                  <button type="submit" className="btn">
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
+          <BottomAds />
         </div>
       </div>
     </div>

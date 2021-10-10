@@ -3,6 +3,7 @@
   padding: 1rem;
   background-color: inherit;
   height: max-content;
+  min-height: 60vh;
 }
 
 .checkout__left {
@@ -13,7 +14,6 @@
 .checkout__title {
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #bec2c23d;
-  color: #fff;
 }
 
 @media (max-width: 700px) {

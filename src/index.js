@@ -6,13 +6,6 @@ import reducer, { initialState } from "./reducer";
 import App from "./App";
 import "./index.css";
 
-/* import {
-  banner,
-  banner1,
-  banner2,
-  banner3,
-} from "./components/images/imageindex";
- */
 ReactDOM.render(
   <React.StrictMode>
     {/* We wrap the app with the StateProvider that we created so that every component will have access to the Data layer */}
@@ -63,43 +56,11 @@ const animateText = () => {
     }
   }, 6000);
 };
+
 /* //////// Banner Animated Images ///////
-const animateImages = () => {
-  const bannerImg = document.querySelector(".banner");
-  bannerImg.src = banner;
-  let banners = [banner, banner1, banner2, banner3];
-  let i = 0;
-  let bannersLength = banners.length - 1;
-  setInterval(() => {
-    if (i < bannersLength) {
-      i++;
-      bannerImg.src = banners[i];
-    } else if (i === bannersLength) {
-      i--;
-      bannerImg.src = banners[i];
-    } else {
-      bannerImg.src = banner;
-    }
-  }, 50000);
-}; */
 
-/*///////// Show Search Bar //////////*/
-const searchBar = document.querySelector(".header__search");
-const searchOption = document.querySelector("#search");
-const searchBtn = document.querySelector(".search__icon");
 
-const toggleSearch = () => {
-  if (searchBar.classList.contains("hide")) {
-    searchBar.classList.remove("hide");
-    searchOption.classList.add("hide");
-  } else {
-    searchBar.classList.add("hide");
-    searchOption.classList.remove("hide");
-  }
-};
-searchOption.addEventListener("click", () => toggleSearch());
-
-searchBtn.addEventListener("click", () => toggleSearch());
+/*/ //////// Show Search Bar //////////*/
 
 /*///////// Menu Toggle /////////*/
 

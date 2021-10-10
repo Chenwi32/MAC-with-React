@@ -1,13 +1,81 @@
 .footer {
   align-items: center;
   background-color: #444545;
-  min-height: 300px;
-  padding: 0 1rem;
+  min-height: 250px;
+  color: #fff;
 }
 .footer__container {
   align-items: center;
-  justify-content: flex-end;
-  padding: 0 1rem;
+  padding: 1rem 1rem 0;
+}
+
+.footer__main {
+  justify-content: space-between;
+  width: 70%;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.social__link {
+  margin: 1rem 0 0;
+}
+
+.social__link:hover {
+  text-decoration: underline;
+}
+
+.social__link-name {
+  font-size: 1.3em;
+}
+
+/* /////// */
+
+.footer__main-form {
+  width: 50%;
+  font-weight: 600;
+}
+
+.footer__main-form p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.message,
+.footer__cta-input {
+  font-size: 1.2em;
+  color: #444545;
+  margin: 1rem 0;
+  padding: 0.2rem 0.5rem;
+  outline: none;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.message {
+  height: 100px;
+}
+
+.footer__cta__button {
+  width: 100%;
+}
+.footer__cta__button .btn2 {
+  width: 100%;
+  font-size: 1em;
+}
+
+/* //////// */
+
+.footer__bottom {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.policies__option {
+  margin: 0 0.5rem;
+}
+
+.policies__option:hover {
+  text-decoration: underline;
 }
 
 .change__BGcolor {
@@ -17,4 +85,59 @@
   border: #fff solid 1px;
   top: 80%;
   right: 5rem;
+  z-index: 5;
+}
+
+@media (max-width: 700px) {
+  .footer__container {
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .footer__main {
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .social {
+    margin: 1.5rem 0;
+  }
+
+  .footer__main-form {
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+
+  .message,
+  .footer__cta-input {
+    width: 80%;
+  }
+
+  .footer__cta__button .btn2 {
+    width: 80%;
+  }
+
+  .footer__bottom {
+    padding-bottom: 0.3rem;
+  }
+
+  .policies {
+    align-items: flex-end;
+  }
+
+  .copyright,
+  .policies__option {
+    font-size: 0.8em;
+  }
+
+  .policies__option {
+    margin: 0 0.2rem;
+  }
+
+  .change__BGcolor {
+    top: 90%;
+    right: 1rem;
+  }
 }

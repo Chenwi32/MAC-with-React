@@ -17,7 +17,7 @@
   width: 55px;
   height: 55px;
   background-color: #fff;
-  border-radius: 50%;
+  border-radius: 3px;
   object-fit: contain;
 }
 
@@ -67,6 +67,8 @@
   margin-right: 0.2rem;
 }
 
+.card__icon:focus,
+.header__option:focus,
 .card__icon:hover,
 .header__option:hover {
   background-color: #313131;
@@ -162,7 +164,7 @@
 
   .mobile__header {
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
   }
 
   .header__container {
@@ -193,6 +195,10 @@
 
   .header__option .line__1 {
     font-size: 0.9em;
+  }
+
+  .header__option .search__icon {
+    color: #fff;
   }
 
   .header__option .line__2 {
