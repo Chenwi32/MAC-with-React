@@ -1,9 +1,12 @@
 .checkout {
-  display: flex;
   padding: 1rem;
   background-color: inherit;
   height: max-content;
   min-height: 60vh;
+}
+
+.checkout__main{
+  margin-top: 3rem;
 }
 
 .checkout__left {

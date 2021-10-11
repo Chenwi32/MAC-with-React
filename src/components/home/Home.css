@@ -201,7 +201,7 @@
 
 .cta {
   width: 70%;
-  margin: auto;
+  margin: 0 auto 6rem;
 }
 
 .cta__title {
@@ -404,7 +404,6 @@
 
   .cta {
     width: 100%;
-    margin: auto;
   }
 
   /*//////// End Main ////////*/

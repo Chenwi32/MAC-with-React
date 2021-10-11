@@ -7,10 +7,13 @@ import {
   product_23,
 } from "../../images/imageindex";
 import Product from "../../product/Product";
+import DressingFilter from "../Dressing/DressingFilter";
 
 function Fabrics() {
   return (
     <div className="products__container container">
+      <DressingFilter />
+
       <div className="one__row grid__3">
         <Product
           title="Dining Table Tray"

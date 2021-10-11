@@ -7,15 +7,15 @@ import {
 } from "../../images/imageindex";
 import Product from "../../product/Product";
 import "../ProductFilter.css";
+import DressingFilter from "./DressingFilter";
 
 function Dressing() {
+ 
+
   return (
     <div className="products__container container">
-      <div className="filter flex">
-        <button className="filter__option">Men</button>
-        <button className="filter__option">Women</button>
-        <button className="filter__option">Children</button>
-      </div>
+
+      <DressingFilter/>
 
       <div className="one__row grid__3">
         <Product

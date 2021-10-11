@@ -21,9 +21,7 @@ function ProductsPageBC() {
             <span className="products__breadcromes-options">Dressing</span>
           </li>
 
-          <li onClick={(event) => history.push("/fabrics")}>
-            <span className="products__breadcromes-options">Fabrics</span>
-          </li>
+          
         </ul>
       </div>
     </div>

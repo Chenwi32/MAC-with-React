@@ -37,6 +37,13 @@ import product_21 from "./ankara-fabrics-3.png";
 import product_22 from "./ankara-fabrics-4.png";
 import product_23 from "./ankara-fabrics-5.png";
 import product_24 from "./vase-2.png";
+import product_25 from "./flower-1.png";
+import product_26 from "./flower-2.png";
+import product_27 from "./flower-3.png";
+
+import orange_logo from "./icons/orange.png";
+import momo_logo from "./icons/momo.png";
+import paypal_logo from "./icons/PayPal.png";
 
 export {
   banner,
@@ -67,6 +74,12 @@ export {
   product_22,
   product_23,
   product_24,
+  product_25,
+  product_26,
+  product_27,
+  momo_logo,
+  orange_logo,
+  paypal_logo,
   team_1,
   team_2,
   team_3,
