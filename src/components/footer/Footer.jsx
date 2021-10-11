@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import PinterestIcon from "@mui/icons-material/Pinterest";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 function Footer() {
   return (
@@ -8,23 +12,37 @@ function Footer() {
       <div className="footer__container container flex__col">
         <div className="footer__main flex">
           <div className="social flex__col">
-            <a href="www.facebook.com" className="social__link flex">
-              <span className="social__link-icon"></span>
+            <a
+              href="https://web.facebook.com/MAfriculture"
+              className="social__link flex"
+            >
+              <span className="social__link-icon">
+                <FacebookRoundedIcon />
+              </span>
               <span className="social__link-name">Facebook</span>
             </a>
 
-            <a href="www.instagram.com" className="social__link flex">
-              <span className="social__link-icon"></span>
+            <a
+              href="https://www.instagram.com/mafriculture/"
+              className="social__link flex"
+            >
+              <span className="social__link-icon">
+                <InstagramIcon />
+              </span>
               <span className="social__link-name">Instagram</span>
             </a>
 
             <a href="www.pinterest.com" className="social__link flex">
-              <span className="social__link-icon"></span>
+              <span className="social__link-icon">
+                <PinterestIcon />
+              </span>
               <span className="social__link-name">Pinterest</span>
             </a>
 
             <a href="www.twitter.com" className="social__link flex">
-              <span className="social__link-icon"></span>
+              <span className="social__link-icon">
+                <TwitterIcon />
+              </span>
               <span className="social__link-name">Twitter</span>
             </a>
           </div>

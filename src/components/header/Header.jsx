@@ -31,7 +31,7 @@ function Header(authUser) {
             </Link> */}
 
             <Link className="link header__option" to="/products">
-              <span className="line__2">Store</span>
+              <span className="line__2">Shop</span>
             </Link>
 
             <Link className="link header__option" to="/blog">
@@ -121,7 +121,7 @@ function Header(authUser) {
         </Link>
 
         <Link className=" header__option" to="/products">
-          <span className="line__2">Store</span>
+          <span className="line__2">Shop</span>
         </Link>
 
         <Link className=" header__option" to="/blog">

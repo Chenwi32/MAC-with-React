@@ -24,6 +24,10 @@
   text-decoration: underline;
 }
 
+.social__link-icon {
+  margin-right: 0.5rem;
+}
+
 .social__link-name {
   font-size: 1.3em;
 }
