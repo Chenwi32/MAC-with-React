@@ -32,14 +32,20 @@ function Footer() {
               <span className="social__link-name">Instagram</span>
             </a>
 
-            <a href="www.pinterest.com" className="social__link flex">
+            <a
+              href="https://www.pinterest.com/mafriculture"
+              className="social__link flex"
+            >
               <span className="social__link-icon">
                 <PinterestIcon />
               </span>
               <span className="social__link-name">Pinterest</span>
             </a>
 
-            <a href="www.twitter.com" className="social__link flex">
+            <a
+              href="https://twitter.com/ChenwiEugene"
+              className="social__link flex"
+            >
               <span className="social__link-icon">
                 <TwitterIcon />
               </span>
