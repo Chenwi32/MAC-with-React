@@ -15,6 +15,7 @@ import {
 import Product from "../product/Product";
 import BottomAds from "../bottomAds/BottomAds";
 import { useHistory } from "react-router";
+import TeamMember from "./teamMembers/TeamMember";
 
 function Home() {
   const history = useHistory();
@@ -233,71 +234,38 @@ function Home() {
             </p>
             <h3 className="title2 ">Meet the team commited to serve you</h3>
             <div className="team">
-              <div className="member flex member__1">
-                <div className="member__image-container">
-                  <img className="member__image" src={team_1} alt="" />
-                </div>
-
-                <div className="member__quotes flex__col">
-                  <h4 className="member__title">Founder</h4>
-                  <p className="small">
-                    “Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard.”
-                  </p>
-
-                  <p className="member__name">Chenwi Eugene</p>
-                </div>
-              </div>
-
-              <div className="member flex member__2">
-                <div className="member__image-container">
-                  <img className="member__image" src={team_2} alt="" />
-                </div>
-
-                <div className="member__quotes flex__col">
-                  <h4 className="member__title">Lorem enginne</h4>
-                  <p className="small">
-                    “Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard.”
-                  </p>
-
-                  <p className="member__name">Eddie Seif</p>
-                </div>
-              </div>
-              <div className="member flex member__3">
-                <div className="member__image-container">
-                  <img className="member__image" src={team_3} alt="" />
-                </div>
-
-                <div className="member__quotes flex__col">
-                  <h4 className="member__title">Lorem ipsum dolor.</h4>
-                  <p className="small">
-                    “Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard.”
-                  </p>
-
-                  <p className="member__name">Irene Ekoti</p>
-                </div>
-              </div>
-              <div className="member flex member__4">
-                <div className="member__image-container">
-                  <img className="member__image" src={team_4} alt="" />
-                </div>
-
-                <div className="member__quotes flex__col">
-                  <h4 className="member__title">Lorem ipsum. </h4>
-                  <p className="small">
-                    “Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard.”
-                  </p>
-
-                  <p className="member__name">Chida Nelson</p>
-                </div>
-              </div>
+              <TeamMember
+                image={team_1}
+                title="Founder"
+                comments="Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry
+                    standard."
+                name="Chenwi Eugene"
+              />
+              <TeamMember
+                image={team_2}
+                title="Lorem enginne"
+                comments="Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry
+                    standard."
+                name="Eddie Seif"
+              />
+              <TeamMember
+                image={team_3}
+                title="Lorem ipsum dolor"
+                comments="Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry
+                    standard."
+                name="Irene Ekoti"
+              />
+              <TeamMember
+                image={team_4}
+                title="Lorem ipsum"
+                comments="Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry
+                    standard."
+                name="Nchida Nelson"
+              />
             </div>
 
             <h3 className="title2 cta__title">Sign up here</h3>

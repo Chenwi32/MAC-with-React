@@ -1,0 +1,57 @@
+.member {
+  padding: 0;
+  width: 70%;
+}
+
+.member__image-container {
+  width: 70%;
+}
+
+.member__image {
+  width: 100%;
+}
+
+.member__quotes {
+  padding: 0.5rem 0.6rem;
+  margin-left: 0.5rem;
+}
+
+.member__title {
+  font-size: 1.2em;
+}
+
+.small {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.member__name {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+@media (max-width: 840px) {
+  .member {
+    width: 85%;
+    margin: 2rem auto;
+  }
+
+  .member__image-container {
+    width: 70%;
+    margin: auto;
+  }
+
+}
+
+@media (max-width: 595px) {
+  .member {
+    flex-direction: column;
+    height: fit-content;
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .member__image {
+    border-radius: 50%;
+  }
+}

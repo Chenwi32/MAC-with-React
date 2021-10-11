@@ -370,37 +370,6 @@
     padding-left: 0;
   }
 
-  .member {
-    padding: 0;
-    width: 100%;
-  }
-
-  .member__image-container {
-    width: 70%;
-  }
-
-  .member__image {
-    width: 100%;
-  }
-
-  .member__quotes {
-    padding: 0.5rem 0.6rem;
-    /* width: 100%; */
-  }
-
-  .member__title {
-    font-size: 1.2em;
-  }
-
-  .small {
-    font-size: 0.9em;
-    margin: 0;
-  }
-
-  .member__name {
-    font-size: 1.2em;
-    margin-top: 0;
-  }
 
   .cta {
     width: 100%;
@@ -413,22 +382,6 @@
   .home .grid {
     display: flex;
     flex-direction: column;
-  }
-
-  .member {
-    flex-direction: column;
-    height: fit-content;
-    width: 80%;
-    margin: 2rem auto;
-  }
-
-  .member__image-container {
-    width: 70%;
-    margin: auto;
-  }
-
-  .member__image {
-    border-radius: 50%;
   }
 
   .cta__form {
