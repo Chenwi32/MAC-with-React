@@ -240,39 +240,49 @@ function Home() {
               itaque numquam ipsam delectus illo vel magnam dicta?
             </p>
             <h3 className="title2 ">Meet the team commited to serve you</h3>
-            <div className="team">
-              <TeamMember
-                image={team_1}
-                title="Founder"
-                comments="Lorem Ipsum is simply dummy text of the printing and
+            <div className="team flex">
+              <div className="team__member flex__col">
+                <TeamMember
+                  image={team_1}
+                  title="Founder"
+                  comments="Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry
                     standard."
-                name="Chenwi Eugene"
-              />
-              <TeamMember
-                image={team_2}
-                title="Lorem enginne"
-                comments="Lorem Ipsum is simply dummy text of the printing and
+                  name="Chenwi Eugene"
+                />
+              </div>
+
+              <div className="team__member-down flex__col">
+                <TeamMember
+                  image={team_2}
+                  title="Lorem enginne"
+                  comments="Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry
                     standard."
-                name="Eddie Seif"
-              />
-              <TeamMember
-                image={team_3}
-                title="Lorem ipsum dolor"
-                comments="Lorem Ipsum is simply dummy text of the printing and
+                  name="Eddie Seif"
+                />
+              </div>
+
+              <div className="team__member flex__col">
+                <TeamMember
+                  image={team_3}
+                  title="Lorem ipsum dolor"
+                  comments="Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry
                     standard."
-                name="Irene Ekoti"
-              />
-              <TeamMember
-                image={team_4}
-                title="Lorem ipsum"
-                comments="Lorem Ipsum is simply dummy text of the printing and
+                  name="Irene Ekoti"
+                />
+              </div>
+              <div className="team__member-down flex__col">
+                <TeamMember
+                  image={team_4}
+                  title="Lorem ipsum"
+                  comments="Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry
                     standard."
-                name="Nchida Nelson"
-              />
+                  name="Nchida Nelson"
+                />
+              </div>
             </div>
 
             <h3 className="title2 cta__title">Sign up here</h3>
