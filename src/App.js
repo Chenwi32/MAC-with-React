@@ -48,6 +48,12 @@ function App() {
     <Router>
       <div className="app">
         <Switch>
+          <Route path="/">
+            <Header />
+            <Home />
+            <Footer />
+          </Route>
+
           <Route path="/register">
             <Register />
           </Route>
@@ -118,12 +124,6 @@ function App() {
           <Route path="/aboutus">
             <Header />
             <AboutUs />
-            <Footer />
-          </Route>
-
-          <Route path="/">
-            <Header />
-            <Home />
             <Footer />
           </Route>
         </Switch>
