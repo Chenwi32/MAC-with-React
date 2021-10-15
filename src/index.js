@@ -5,6 +5,7 @@ import { StateProvider } from "./StateProvider";
 import reducer, { initialState } from "./reducer";
 import App from "./App";
 import "./index.css";
+import { animateText } from "./animations";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.render(
       <App />
     </StateProvider>
   </React.StrictMode>,
+
   document.getElementById("root")
 );
 
@@ -41,24 +43,6 @@ BgBtn.addEventListener("click", () => {
     });
   }
 });
-/*/////// Banner Animated Text ///////*/
-const animateText = () => {
-  const textContainer = document.getElementById("animated__text");
-  const feel = document.getElementById("feel");
-  const priority = document.getElementById("priority");
-  // debugger
-  textContainer.innerHTML = feel.innerHTML;
-  setInterval(() => {
-    if (textContainer.innerHTML === feel.innerHTML) {
-      textContainer.innerHTML = priority.innerHTML;
-    } else {
-      textContainer.innerHTML = feel.innerHTML;
-    }
-  }, 6000);
-};
-
-/* //////// Banner Animated Images ///////
-
 
 /*/ //////// Show Search Bar //////////*/
 
@@ -81,7 +65,4 @@ const toggle = () => {
 toggleBtn.addEventListener("click", () => toggle());
 overlay.addEventListener("click", () => toggle());
 
-window.onload = () => {
-  animateText();
-  /* animateImages(); */
-};
+animateText();

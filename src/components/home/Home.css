@@ -59,10 +59,6 @@
   margin: 3rem;
 }
 
-.title {
-  margin-top: 3rem;
-}
-
 .yout__video {
   width: 60%;
   height: 300px;
@@ -369,7 +365,6 @@
   .team {
     padding-left: 0;
   }
-
 
   .cta {
     width: 100%;

@@ -25,7 +25,13 @@ function Home() {
       <div className="home-container container flex__col">
         <div className="banner-container flex__col banner">
           <div className="banner">
-            <h1 id="backToTop">MAfriculture</h1>
+            <h1 id="backToTop">
+              <span className="m">
+                <em>M</em>
+              </span>
+              <span className="a">A</span>
+              friculture
+            </h1>
 
             <div className="quotes">
               <p>
@@ -35,14 +41,15 @@ function Home() {
                 <strong>Give The African Style A Try!</strong>
               </p>
               <div id="animated__text" className="animated__text"></div>
-              <span className="feel hide" id="feel">
+
+              <p className="feel hide" id="feel">
                 <strong>“FEEL THE ROYALTY”</strong>
-              </span>
-              <span className="hide" id="priority">
+              </p>
+              <p className="hide" id="priority">
                 <strong>
                   <em>Your Satisfaction, Our Priority!</em>
                 </strong>
-              </span>
+              </p>
             </div>
 
             <div className="buttons flex">
@@ -154,7 +161,7 @@ function Home() {
             </p>
             <ul>
               <li>
-                Lorem ipsum dolor sit amet.{"  "}
+                Lorem ipsum dolor sit amet.
                 <span className="li__svg">
                   <svg
                     width="24"

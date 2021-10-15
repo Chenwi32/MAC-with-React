@@ -12,7 +12,7 @@ function AboutUs() {
       </h1>
 
       <p className="about__intro">
-        <span className="first__char">M</span>Africulture which basically means{" "}
+        <span className="first__char">M</span>Africulture which basically means
         <strong>M</strong>odern
         <strong> A</strong>frican culture is a new trending business brand with
         a primary aim of promoting the modernization of African creative arts
@@ -45,10 +45,10 @@ function AboutUs() {
         together to make something great.
       </p>
 
-      <h2 className="title">Our Gaol</h2>
+      <h2 className="title">Our Goal</h2>
 
       <p className="about__p">
-        <span className="first__char">O</span>ur 
+        <span className="first__char">O</span>ur
       </p>
     </div>
   );
