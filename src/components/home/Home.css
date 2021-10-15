@@ -8,6 +8,9 @@
 
 .banner-container {
   background-image: url("../images/banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: fill;
   height: 500px;
   width: 100%;
   color: #000;
@@ -18,7 +21,7 @@
 
 .banner-container .banner {
   padding: 3rem 2rem 1rem;
-  background: rgba(255, 255, 255, 0.849);
+  background: rgba(255, 255, 255, 0.767);
   width: 90%;
   margin: auto;
 }
@@ -146,7 +149,7 @@
 }
 
 .team__member-down {
-  margin-top: 2rem;
+  margin-top: 5rem;
   justify-content: flex-end;
 }
 
