@@ -73,10 +73,6 @@ function Header(authUser) {
             </Link>
           </div>
         </div>
-        <div className="header__search container hide">
-          <input className="search__input" type="text" />
-          <Search className="search__icon" />
-        </div>
       </div>
 
       {/*/////////// Mobile Menu //////////*/}
