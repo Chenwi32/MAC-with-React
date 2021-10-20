@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import logo from "../images/icons/7777.png";
-import { Search, Menu, AddShoppingCart } from "@mui/icons-material";
+import { Menu, AddShoppingCart } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 import { auth } from "../../firebase";
@@ -131,11 +131,6 @@ function Header(authUser) {
         <Link className=" header__option" to="/aboutus">
           <span className="line__2">About Us</span>
         </Link>
-
-        <div className="header__search container hide">
-          <input className="search__input" type="text" />
-          <Search className="search__icon" />
-        </div>
       </div>
     </React.Fragment>
   );

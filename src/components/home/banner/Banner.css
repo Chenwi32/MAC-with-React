@@ -4,7 +4,7 @@
   background-position: center;
   background-size: fill;
   height: 500px;
-  width: 100vw;
+  width: 95vw;
   color: #000;
   align-items: center;
   font-weight: 800;
@@ -12,9 +12,10 @@
 }
 
 .banner-container .banner {
-  padding: 3rem 2rem 1rem;
-  background: rgba(255, 255, 255, 0.664);
+  padding: 3rem 2rem 2rem;
+  background: rgba(90, 89, 89, 0.164);
   width: 80%;
+  height: 90%;
   margin: auto;
 }
 

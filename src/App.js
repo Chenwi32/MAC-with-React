@@ -18,6 +18,7 @@ import ProductsPageBC from "./components/productsPage/ProductsPageBC";
 import Blog from "./components/Blog/Blog";
 import Gallery from "./components/Gallery/Gallery";
 import AboutUs from "./components/Aboutus/AboutUs";
+import SupportHeader from "./components/support/SupportHeader";
 
 function App() {
   const dispatch = useStateValue()[1];
@@ -57,19 +58,25 @@ function App() {
           </Route>
 
           <Route path="/checkout">
-            <Header />
+            <div className="home__header">
+              <Header />
+            </div>
+            <SupportHeader />
             <Checkout />
             <Footer />
           </Route>
 
           <Route path={"/payment"}>
-            <Header />
+            <div className="home__header">
+              <Header />
+            </div>
             <Payment />
             <Footer />
           </Route>
 
           <Route path="/products">
             <Header />
+            <SupportHeader />
             <ProductsPageBC />
             <Products />
             <Footer />
@@ -77,6 +84,7 @@ function App() {
 
           <Route path="/homeitems">
             <Header />
+            <SupportHeader />
             <ProductsPageBC />
             <HomeProducts />
             <Footer />
@@ -84,6 +92,7 @@ function App() {
 
           <Route path="/officeitems">
             <Header />
+            <SupportHeader />
             <ProductsPageBC />
             <Office />
             <Footer />
@@ -91,6 +100,7 @@ function App() {
 
           <Route path="/dressing">
             <Header />
+            <SupportHeader />
             <ProductsPageBC />
             <Dressing />
             <Footer />
@@ -98,31 +108,44 @@ function App() {
 
           <Route path="/fabrics">
             <Header />
+            <SupportHeader />
             <ProductsPageBC />
             <Fabrics />
             <Footer />
           </Route>
 
           <Route path="/blog">
-            <Header />
+            <div className="home__header">
+              <Header />
+            </div>
+            <SupportHeader />
             <Blog />
             <Footer />
           </Route>
 
           <Route path="/gallery">
-            <Header />
+            <div className="home__header">
+              <Header />
+            </div>
+            <SupportHeader />
             <Gallery />
             <Footer />
           </Route>
 
           <Route path="/aboutus">
-            <Header />
+            <div className="home__header">
+              <Header />
+            </div>
+            <SupportHeader />
             <AboutUs />
             <Footer />
           </Route>
 
           <Route path="/">
-            <Header />
+            <div className="home__header">
+              <Header />
+            </div>
+            <SupportHeader />
             <Home />
             <Footer />
           </Route>

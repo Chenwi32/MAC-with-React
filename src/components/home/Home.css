@@ -1,3 +1,10 @@
+.home__header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 6;
+}
+
 .home-container {
   margin: auto;
   background-color: rgba(255, 255, 255, 0.692);

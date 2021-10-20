@@ -14,13 +14,10 @@ import {
 } from "../images/imageindex";
 import Product from "../product/Product";
 import BottomAds from "../bottomAds/BottomAds";
-import { useHistory } from "react-router";
 import TeamMember from "./teamMembers/TeamMember";
 import Banner from "./banner/Banner";
 
 function Home() {
-  const history = useHistory();
-
   return (
     <div className="home">
       <Banner />
