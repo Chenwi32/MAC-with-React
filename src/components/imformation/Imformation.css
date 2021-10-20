@@ -1,0 +1,15 @@
+.imform {
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 1.5rem;
+}
+
+.imform__greet {
+  color: rgb(236, 31, 4);
+  padding-bottom: 1rem;
+}
+
+.imform__news {
+  color: #444545;
+}
