@@ -14,56 +14,14 @@ import {
 } from "../images/imageindex";
 import Product from "../product/Product";
 import BottomAds from "../bottomAds/BottomAds";
-import { useHistory } from "react-router";
 import TeamMember from "./teamMembers/TeamMember";
+import Banner from "./banner/Banner";
 
 function Home() {
-  const history = useHistory();
-
   return (
     <div className="home">
+      <Banner />
       <div className="home-container container flex__col">
-        <div className="banner-container flex__col banner">
-          <div className="banner">
-            <h1 id="backToTop">
-              <span className="m">
-                <em>M</em>
-              </span>
-              <span className="a">A</span>
-              friculture
-            </h1>
-
-            <div className="quotes">
-              <p>
-                There Is Beauty In Everything — <br />
-                African Fashion Is Never An Exception.
-                <br />
-                <strong>Give The African Style A Try!</strong>
-              </p>
-              <div id="animated__text" className="animated__text"></div>
-
-              <p className="feel hide" id="feel">
-                <strong>“FEEL THE ROYALTY”</strong>
-              </p>
-              <p className="hide" id="priority">
-                <strong>
-                  <em>Your Satisfaction, Our Priority!</em>
-                </strong>
-              </p>
-            </div>
-
-            <div className="buttons flex">
-              <button
-                className="btn banner__btn"
-                onClick={(event) => history.push("/products")}
-              >
-                Shop Now
-              </button>
-              <button className="btn2 banner__btn">Sign Up</button>
-            </div>
-          </div>
-        </div>
-
         <div className="main">
           <div className="intro">
             <h2>
@@ -289,13 +247,14 @@ function Home() {
 
             <div className="cta">
               <p className="cta__p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque natus cumque impedit veritatis amet fugit excepturi?
-                Sunt suscipit numquam adipisci iste ut ullam. Veniam commodi
-                molestias suscipit ut maxime modi at doloremque perspiciatis
-                nisi? Commodi iste eum hic facilis fugiat eaque, provident velit
-                vel perspiciatis quasi ex quam non aliquid nam cum dicta beatae
-                delectus quidem quod corrupti saepe.
+                We are working to make this a multi-vendor platform, so we
+                strongly encourage you to register your interest if you are a
+                creative arts and craft designer looking to expand your scope
+                and get more people to know about your work and get to buy from
+                you. <br />
+                if you are not a designer but love our products, we still
+                encourage to sign up for an account as a regular customer so
+                that you can be benefiting from our bonuses.
               </p>
               <form action="" className="cta__form flex">
                 <div className="cta__input-container flex__col">
