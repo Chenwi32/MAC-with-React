@@ -6,7 +6,7 @@ function Banner() {
   const history = useHistory();
 
   return (
-    <div className="banner-container flex__col banner">
+    <div className="banner-container flex banner">
       <div className="banner container">
         <h1 id="backToTop">
           <span className="m">

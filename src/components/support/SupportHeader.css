@@ -21,6 +21,8 @@
 }
 
 .search__input {
+  font-size: 1.3em;
+  color: #444545;
   width: 80%;
   height: 24px;
   padding: 1rem;

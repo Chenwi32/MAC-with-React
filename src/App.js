@@ -19,6 +19,7 @@ import Blog from "./components/Blog/Blog";
 import Gallery from "./components/Gallery/Gallery";
 import AboutUs from "./components/Aboutus/AboutUs";
 import SupportHeader from "./components/support/SupportHeader";
+import Imformation from "./components/imformation/Imformation";
 
 function App() {
   const dispatch = useStateValue()[1];
@@ -142,6 +143,7 @@ function App() {
           </Route>
 
           <Route path="/">
+            <Imformation />
             <div className="home__header">
               <Header />
             </div>
