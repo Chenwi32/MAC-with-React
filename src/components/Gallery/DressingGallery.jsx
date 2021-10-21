@@ -1,6 +1,23 @@
 import React from "react";
 import {
   dress_1,
+  dress_2,
+  dress_3,
+  dress_4,
+  dress_5,
+  dress_6,
+  dress_7,
+  dress_8,
+  dress_9,
+  dress_10,
+  dress_12,
+  dress_13,
+} from "./images/galleryIndex";
+
+const images = [
+  dress_1,
+  dress_2,
+  dress_3,
   dress_10,
   dress_12,
   dress_13,
@@ -10,7 +27,7 @@ import {
   dress_7,
   dress_8,
   dress_9,
-} from "./images/galleryIndex";
+];
 
 function DressingGallery() {
   return (

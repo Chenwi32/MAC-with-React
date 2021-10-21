@@ -1,6 +1,7 @@
 export const initialState = {
   basket: [],
   user: null,
+  images: [],
 };
 
 // Selector
@@ -13,14 +14,14 @@ const reducer = (state = initialState, action) => {
   // The Switch statement will be based on the action triggered
   switch (action.type) {
     // First case, if the action is ADD_TO_CART
-    case 'ADD_TO_CART':
+    case "ADD_TO_CART":
       return {
         ...state,
         basket: [...state.basket, action.item],
       };
 
     // Second case, if the action is REMOVE_FROM_CART
-    case 'REMOVE_FROM_CART':
+    case "REMOVE_FROM_CART":
       const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.id
       );
@@ -33,7 +34,7 @@ const reducer = (state = initialState, action) => {
         basket: newBasket,
       };
     // Second case, if the action is SET_USER
-    case 'SET_USER':
+    case "SET_USER":
       // debugger
       return {
         ...state,
