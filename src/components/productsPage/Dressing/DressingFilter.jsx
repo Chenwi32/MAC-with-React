@@ -12,6 +12,8 @@ function DressingFilter() {
 
       <button className="filter__option">Children</button>
 
+      <button className="filter__option">Unisex</button>
+
       <button className="filter__option">Couple</button>
 
       <button

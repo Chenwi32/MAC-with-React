@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import logo from "../images/icons/7777.png";
-import { Menu, AddShoppingCart } from "@mui/icons-material";
+import { Menu, AddShoppingCart, Home } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 import { auth } from "../../firebase";
@@ -21,9 +21,14 @@ function Header(authUser) {
     <React.Fragment>
       <div className="header">
         <div className="header__container container">
-          <Link to="/">
-            <img src={logo} className="logo" alt="logo" />
-          </Link>
+          <div className="header__left flex">
+            <Link to="/">
+              <img src={logo} className="logo" alt="logo" />
+            </Link>
+            <Link to="/">
+              <Home className="link" />
+            </Link>
+          </div>
 
           <div className="header-nav">
             {/* <Link className="link header__option" id="search">
