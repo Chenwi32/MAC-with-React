@@ -13,7 +13,7 @@ function AboutUs() {
 
       <p className="about__intro">
         <span className="first__char">M</span>Africulture which basically means
-        <strong>M</strong>odern
+        <strong> M</strong>odern
         <strong> A</strong>frican culture is a new trending business brand with
         a primary aim of promoting the modernization of African creative arts
         and craft, and market these great designs to the world

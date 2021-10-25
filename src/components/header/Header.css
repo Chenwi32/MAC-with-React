@@ -10,6 +10,17 @@
   justify-content: space-between;
 }
 
+.header__left {
+  color: #fff;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.header__left .link {
+  font-size: 3em;
+  margin-left: 2rem;
+}
+
 .mobile__header .logo,
 .header .logo {
   width: 55px;
