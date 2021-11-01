@@ -114,6 +114,11 @@ code {
   opacity: 0;
 }
 
+.fade2 {
+  opacity: 0;
+  z-index: -1;
+}
+
 .title {
   color: rgb(236, 31, 4);
   font-size: 2em;
