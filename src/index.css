@@ -128,6 +128,12 @@ code {
   color: rgb(236, 31, 4);
   font-size: 1.7em;
   width: fit-content;
-
   margin: 3rem 1rem;
+}
+
+.title3 {
+  color: rgb(236, 31, 4);
+  font-size: 2em;
+  width: fit-content;
+  margin-top: 2.5rem;
 }

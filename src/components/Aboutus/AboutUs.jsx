@@ -19,7 +19,7 @@ function AboutUs() {
         and craft, and market these great designs to the world
       </p>
 
-      <h2 className="title">Our Mission</h2>
+      <h2 className="title3">Our Mission</h2>
 
       <p className="about__p">
         <span className="first__char">T</span>here are a lot of creative minds
@@ -45,7 +45,7 @@ function AboutUs() {
         together to make something great.
       </p>
 
-      <h2 className="title">Our Goal</h2>
+      <h2 className="title3">Our Goal</h2>
 
       <p className="about__p">
         <span className="first__char">O</span>ur
