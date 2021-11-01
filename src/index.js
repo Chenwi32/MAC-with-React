@@ -5,7 +5,6 @@ import { StateProvider } from "./StateProvider";
 import reducer, { initialState } from "./reducer";
 import App from "./App";
 import "./index.css";
-import { animateText } from "./animations";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -64,5 +63,3 @@ const toggle = () => {
 
 toggleBtn.addEventListener("click", () => toggle());
 overlay.addEventListener("click", () => toggle());
-
-animateText();
