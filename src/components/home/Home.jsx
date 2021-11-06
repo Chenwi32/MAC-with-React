@@ -203,9 +203,7 @@ function Home() {
                 <TeamMember
                   image={team_1}
                   title="Founder"
-                  comments="Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry
-                    standard."
+                  comments="This project keeps me up at night"
                   name="Chenwi Eugene"
                 />
               </div>
