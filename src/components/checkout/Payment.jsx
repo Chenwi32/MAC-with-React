@@ -5,9 +5,11 @@ import { getBasketTotal } from '../../reducer';
 import { useStateValue } from '../../StateProvider';
 import CheckoutProduct from './CheckoutProduct';
 import './Payment.css';
+import ReactPayPal from '../paymentMethods/ReactPayPal'
 
 function Payment() {
   const { basket, user } = useStateValue()[0];
+  const [checkout, setCheckout] = React.useState(false);
 
   return (
     <div className="payment container">
@@ -63,9 +65,18 @@ function Payment() {
                 prefix={'XAF'}
               />
             </p>
-            <button className="btn" disabled={false}>
-              Buy now
-            </button>
+            {(checkout === true)
+              ? <div className="payment-div">
+                <ReactPayPal
+                  total={getBasketTotal(basket)}
+                />
+              </div>
+              : <div>
+                <button onClick={() => { setCheckout(true) }} className="btn checkout-button" disabled={false}>
+                  Buy now
+                </button>
+              </div>
+            }
           </div>
         </div>
       </div>
