@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 import {
   product_1,
-  product_2,
-  product_3,
-  product_6,
-  product_11,
-  product_8,
+  // product_2,
+  // product_3,
+  // product_6,
+  // product_11,
+  // product_8,
   team_1,
   team_2,
   team_3,
@@ -16,8 +16,30 @@ import Product from "../product/Product";
 import BottomAds from "../bottomAds/BottomAds";
 import TeamMember from "./teamMembers/TeamMember";
 import Banner from "./banner/Banner";
+import { db } from "../../firebase"
 
 function Home() {
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    getProducts()
+  }, [])
+
+  const getProducts = () => {
+    db.collection('products').get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+
+          setProducts(prev => ([...prev, doc.data()]))
+        })
+      })
+      .catch(err => {
+        console.log(err.message)
+      })
+  }
+
+  console.log({ products });
+
   return (
     <div className="home">
       <Banner />
@@ -44,7 +66,19 @@ function Home() {
           <h2 className="title">Featured Products</h2>
 
           <div className="one__row grid">
-            <div>
+            {products.map(({ title, image, rating, price }, index) => (
+              <div key={index}>
+                <Product
+                  title={title}
+                  image={image}
+                  price={price}
+                  rating={rating}
+                  id={index}
+                />
+              </div>
+            ))}
+            
+            {/* <div>
               <Product
                 title="Table Flower Vase"
                 image={product_6}
@@ -92,7 +126,7 @@ function Home() {
                 rating={5}
                 id={1}
               />
-            </div>
+            </div> */}
           </div>
 
           <h2 className="title">Premium Product</h2>

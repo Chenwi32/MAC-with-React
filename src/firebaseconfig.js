@@ -3,6 +3,7 @@
 const firebaseConfig = {
   apiKey: 'AIzaSyB4qjTqizMwoYccmwJ-_LOxEHXLqL4efX4',
   authDomain: 'mafriculture.firebaseapp.com',
+  databaseURL: "https://mafriculture-default-rtdb.firebaseio.com",
   projectId: 'mafriculture',
   storageBucket: 'mafriculture.appspot.com',
   messagingSenderId: '817562706849',
