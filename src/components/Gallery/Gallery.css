@@ -11,3 +11,8 @@
   width: 100%;
   height: 100%;
 }
+
+.ril-image-current.ril__image {
+  width: auto;
+  height: auto;
+}
