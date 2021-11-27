@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Lightbox from 'react-image-lightbox';
+import ImageViewer from "../imageViewer/ImageViewer";
 import {
   dress_1,
   dress_2,
@@ -12,13 +13,11 @@ import {
   dress_9,
   dress_10,
   dress_12,
-  dress_13
+  dress_13,
 } from "./images/galleryIndex";
 
 const images = [
   dress_1,
-  dress_2,
-  dress_3,
   dress_10,
   dress_12,
   dress_13,
@@ -34,6 +33,25 @@ function DressingGallery() {
   const [isOpen, setIsOpen] = useState(false)
   const [photoIndex, setPhotoIndex] = useState(0)
   console.log(photoIndex);
+  const showImageViewer = () => {
+    const imageViewer = document.querySelector(".viewimage");
+    let classList = imageViewer.classList;
+
+    if (classList.contains("fade2")) {
+      classList.remove("fade2");
+    } else {
+      classList.add("fade2");
+    }
+  };
+
+  const thumbnails = document.querySelectorAll("gallery__image");
+
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", () => {
+      showImageViewer();
+    });
+  });
+
   return (
     <div class="container">
       <div className="gallery grid__4">
@@ -75,6 +93,10 @@ function DressingGallery() {
             // }
           />
         )}
+      </div>
+
+      <div className="viewimage fade2">
+        <ImageViewer images={images} />
       </div>
     </div>
   );

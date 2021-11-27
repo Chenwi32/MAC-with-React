@@ -95,6 +95,13 @@ code {
   font-size: 1.5em;
   font-weight: 800;
   color: rgb(255, 115, 0);
+  cursor: pointer;
+}
+
+.reviews {
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
 }
 
 .link {
@@ -112,6 +119,11 @@ code {
 
 .fade {
   opacity: 0;
+}
+
+.fade2 {
+  opacity: 0;
+  z-index: -1;
 }
 
 .title {

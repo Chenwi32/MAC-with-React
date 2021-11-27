@@ -1,9 +1,9 @@
-import React from 'react';
-import CurrencyFormat from 'react-currency-format';
-import './Subtotal.css';
-import { useStateValue } from '../../StateProvider';
-import { getBasketTotal } from '../../reducer';
-import { useHistory } from 'react-router-dom';
+import React from "react";
+import CurrencyFormat from "react-currency-format";
+import "./Subtotal.css";
+import { useStateValue } from "../../StateProvider";
+import { getBasketTotal } from "../../reducer";
+import { useHistory } from "react-router-dom";
 
 function Subtotal() {
   const history = useHistory();
@@ -22,12 +22,12 @@ function Subtotal() {
         )}
         decimalScale={2}
         value={getBasketTotal(basket)}
-        displayType={'text'}
+        displayType={"text"}
         thousandSeparator={true}
-        prefix={'XAF'}
+        prefix={"XAF"}
       />
 
-      <button className="btn" onClick={(event) => history.push('/payment')}>
+      <button className="btn" onClick={() => history.push("/payment")}>
         Proceed to Checkout
       </button>
     </div>

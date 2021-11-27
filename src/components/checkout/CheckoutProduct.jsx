@@ -19,15 +19,6 @@ function CheckoutProduct({ id, image, title, price, rating }) {
         <div>
           <p>{title}</p>
           <p>XAF {price} </p>
-          <div className="rating flex">
-            {Array(rating)
-              .fill()
-              .map((_, i) => (
-                <p className="rating__stars" key={i}>
-                  &#x2B50;
-                </p>
-              ))}
-          </div>
         </div>
 
         <button onClick={removeFromCart} className="btn2">

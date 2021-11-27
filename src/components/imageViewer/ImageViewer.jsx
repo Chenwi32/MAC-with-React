@@ -1,10 +1,9 @@
 import React from "react";
+import { next, prev } from "../Gallery/images/galleryIndex";
 import "./ImageViewer.css";
-import { next, prev } from "./images/galleryIndex";
-import { useStateValue } from "../../StateProvider";
 
-function ImageViewer({ image }) {
-  const { images } = useStateValue()[0];
+function ImageViewer(images) {
+  let imagesArr = images;
 
   let i = 0;
 
@@ -21,7 +20,7 @@ function ImageViewer({ image }) {
         />
         <img src={prev} alt="" class="prev " />
         <div class="img">
-          <img src={images[i]} alt="" />
+          <img src={imagesArr[i]} alt="" />
         </div>
       </div>
     </div>
