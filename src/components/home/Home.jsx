@@ -16,27 +16,27 @@ import Product from "../product/Product";
 import BottomAds from "../bottomAds/BottomAds";
 import TeamMember from "./teamMembers/TeamMember";
 import Banner from "./banner/Banner";
-import { db } from "../../firebase"
+import { db } from "../../firebase";
 
 function Home() {
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    getProducts()
-  }, [])
+    getProducts();
+  }, []);
 
   const getProducts = () => {
-    db.collection('products').get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-
-          setProducts(prev => ([...prev, doc.data()]))
-        })
+    db.collection("products")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          setProducts((prev) => [...prev, doc.data()]);
+        });
       })
-      .catch(err => {
-        console.log(err.message)
-      })
-  }
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
 
   console.log({ products });
 
@@ -65,7 +65,7 @@ function Home() {
 
           <h2 className="title">Featured Products</h2>
 
-          <div className="one__row grid">
+          <div className="one__row grid__3">
             {products.map(({ title, image, rating, price }, index) => (
               <div key={index}>
                 <Product
@@ -77,56 +77,6 @@ function Home() {
                 />
               </div>
             ))}
-            
-            {/* <div>
-              <Product
-                title="Table Flower Vase"
-                image={product_6}
-                price={2500}
-                rating={3}
-                id={5}
-              />
-            </div>
-
-            <div>
-              <Product
-                title="Table Flower Vase"
-                image={product_3}
-                price={4500}
-                rating={4}
-                id={2}
-              />
-            </div>
-
-            <div>
-              <Product
-                title="Dining Table Tray"
-                image={product_8}
-                price={5000}
-                rating={4}
-                id={3}
-              />
-            </div>
-
-            <div>
-              <Product
-                title="Table Flower Vase"
-                image={product_2}
-                price={3000}
-                rating={3}
-                id={4}
-              />
-            </div>
-
-            <div className="last__featured">
-              <Product
-                title="Decoration Stand"
-                image={product_11}
-                price={10000}
-                rating={5}
-                id={1}
-              />
-            </div> */}
           </div>
 
           <h2 className="title">Premium Product</h2>
