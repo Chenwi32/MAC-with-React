@@ -1,15 +1,20 @@
 import React from "react";
 import "./Product.css";
 import { useStateValue } from "../../StateProvider";
+import Rating from "../Rating";
+import { useHistory } from "react-router";
+/* import { Link as button } from "react-router-dom"; */
 
-function Product({ id, title, image, price, rating }) {
+function Product({ _id, title, image, price, rating, reviews }) {
+  const history = useHistory();
+
   const dispatch = useStateValue()[1];
 
   const addToCart = () => {
     dispatch({
       type: "ADD_TO_CART",
       item: {
-        id: id,
+        id: _id,
         title: title,
         image: image,
         price: price,
@@ -31,7 +36,9 @@ function Product({ id, title, image, price, rating }) {
           <small>XAF</small>
           <strong> {price}</strong>
         </p>
-        <div className="rating flex">
+
+        <Rating rating={rating} reviews={reviews} />
+        {/* <div className="rating flex">
           {Array(rating)
             .fill()
             .map((_, i) => (
@@ -39,12 +46,18 @@ function Product({ id, title, image, price, rating }) {
                 &#x2B50;
               </p>
             ))}
-        </div>
+        </div> */}
 
         <button onClick={addToCart} className="addtocart btn">
           Add to cart
         </button>
-        <button className="learn-more">Learn more</button>
+
+        <button
+          className="learn-more"
+          onClick={() => history.push(`/product/${_id}`)}
+        >
+          Learn more
+        </button>
       </div>
     </div>
   );

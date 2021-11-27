@@ -20,6 +20,7 @@ import Gallery from "./components/Gallery/Gallery";
 import AboutUs from "./components/Aboutus/AboutUs";
 import SupportHeader from "./components/support/SupportHeader";
 import Imformation from "./components/imformation/Imformation";
+import SingleProduct from "./components/productsPage/SingleProduct";
 
 function App() {
   const dispatch = useStateValue()[1];
@@ -115,6 +116,12 @@ function App() {
             <Footer />
           </Route>
 
+          <Route path="/product/:id" component={SingleProduct}>
+            {/* <Header />
+              <SingleProduct/>
+            <Footer /> */}
+          </Route>
+
           <Route path="/blog">
             <div className="home__header">
               <Header />
@@ -142,7 +149,7 @@ function App() {
             <Footer />
           </Route>
 
-          <Route path="/">
+          <Route path="/" component={Home} exact>
             <Imformation />
             <div className="home__header">
               <Header />

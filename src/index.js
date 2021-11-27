@@ -5,6 +5,7 @@ import { StateProvider } from "./StateProvider";
 import reducer, { initialState } from "./reducer";
 import App from "./App";
 import "./index.css";
+import "../node_modules/font-awesome/css/font-awesome.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,11 +19,15 @@ ReactDOM.render(
 );
 
 // Background color changer
+
 const bodyBG = document.querySelector("body");
 const productBG = document.querySelectorAll(".product");
+
 const BgBtn = document.querySelector(".change__BGcolor");
 const productText = document.querySelectorAll(".about__product");
 let colors = ["#000", "#f0f0f0", "rgb(144, 170, 162)", "#444545"];
+
+if (!BgBtn);
 BgBtn.addEventListener("click", () => {
   let randomColor = Math.floor(Math.random() * colors.length);
   bodyBG.style.backgroundColor = colors[randomColor];
@@ -61,5 +66,5 @@ const toggle = () => {
   }
 };
 
-toggleBtn.addEventListener("click", () => toggle());
+if (toggleBtn) toggleBtn.addEventListener("click", () => toggle());
 overlay.addEventListener("click", () => toggle());
