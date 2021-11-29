@@ -1,11 +1,13 @@
 .subtotal {
-  width: 100%;
+  width: fit-content;
   min-width: 200px;
   margin: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #606363;
+  justify-content: center;
+  /*   background-color: #606363; */
+  border: 1px solid rgb(236, 31, 4);
   padding: 1em;
 }
 
@@ -14,8 +16,6 @@
 }
 
 .subtotal .btn {
-  max-width: 200px;
-
-  margin-left: -2.5rem;
   margin-top: 1rem;
+  width: 100%;
 }

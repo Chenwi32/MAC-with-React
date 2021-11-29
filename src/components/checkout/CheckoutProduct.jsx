@@ -14,7 +14,10 @@ function CheckoutProduct({ id, image, title, price, rating }) {
 
   return (
     <div className="checkoutProduct flex">
-      <img src={image} alt="" />
+      <div className="checkoutProduct__img flex">
+        <img src={image} alt="" />
+      </div>
+
       <div className="info flex__col">
         <div>
           <p>{title}</p>
