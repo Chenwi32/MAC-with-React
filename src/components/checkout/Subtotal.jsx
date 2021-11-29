@@ -12,20 +12,22 @@ function Subtotal() {
 
   return (
     <div className="subtotal flex__col">
-      <CurrencyFormat
-        renderText={(value) => (
-          <>
-            <p className="subtotal__value">
-              Subtotal ({basket?.length} items): <strong>{value}</strong>
-            </p>
-          </>
-        )}
-        decimalScale={2}
-        value={getBasketTotal(basket)}
-        displayType={"text"}
-        thousandSeparator={true}
-        prefix={"XAF"}
-      />
+      <div>
+        <CurrencyFormat
+          renderText={(value) => (
+            <>
+              <p className="subtotal__value">
+                Subtotal ({basket?.length} items): <strong>{value}</strong>
+              </p>
+            </>
+          )}
+          decimalScale={2}
+          value={getBasketTotal(basket)}
+          displayType={"text"}
+          thousandSeparator={true}
+          prefix={"XAF"}
+        />
+      </div>
 
       <button className="btn" onClick={() => history.push("/payment")}>
         Proceed to Checkout

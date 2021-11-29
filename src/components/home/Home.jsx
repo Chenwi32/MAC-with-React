@@ -118,7 +118,7 @@ function Home() {
               </li>
 
               <li>
-                Lorem ipsum dolor sit amet.{"  "}
+                Lorem ipsum dolor sit amet.
                 <span className="li__svg">
                   <svg
                     width="24"
@@ -133,7 +133,7 @@ function Home() {
               </li>
 
               <li>
-                Lorem ipsum dolor sit amet.{"  "}
+                Lorem ipsum dolor sit amet.
                 <span className="li__svg">
                   <svg
                     width="24"
@@ -147,7 +147,7 @@ function Home() {
                 </span>
               </li>
               <li>
-                Lorem ipsum dolor sit amet.{"  "}
+                Lorem ipsum dolor sit amet.
                 <span className="li__svg">
                   <svg
                     width="24"
