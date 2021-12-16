@@ -2,28 +2,38 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import {
   product_1,
-  // product_2,
-  // product_3,
-  // product_6,
-  // product_11,
-  // product_8,
-  team_1,
-  team_2,
-  team_3,
-  team_4,
 } from "../images/imageindex";
 import Product from "../product/Product";
 import BottomAds from "../bottomAds/BottomAds";
 import TeamMember from "./teamMembers/TeamMember";
 import Banner from "./banner/Banner";
 import { db } from "../../firebase";
+import { useStateValue } from '../../StateProvider'
 
-function Home() {
-  const [products, setProducts] = useState([]);
+export default function Home() {
+  const [products, setProducts] = useState([])
+  const [team, setTeam] = useState([])
+  const dispatch = useStateValue()[1]
 
   useEffect(() => {
-    getProducts();
-  }, []);
+    getProducts()
+    getTeam()
+  }, [])
+
+  useEffect(() => {
+    // Add products to the store so that it will available to other components
+    if (products) {
+      dispatch({
+        type: "SET_PRODUCTS",
+        products
+      });
+    } else {
+      dispatch({
+        type: "SET_PRODUCTS",
+        products: [],
+      });
+    }
+  }, [dispatch, products]);
 
   const getProducts = () => {
     db.collection("products")
@@ -38,7 +48,17 @@ function Home() {
       });
   };
 
-  console.log({ products });
+  const getTeam = () => {
+    db.collection('team').get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          setTeam(prev => ([...prev, doc.data()]))
+        })
+      })
+      .catch(err => {
+        console.log(err.message)
+      })
+  }
 
   return (
     <div className="home">
@@ -163,8 +183,6 @@ function Home() {
             </ul>
           </div>
 
-          {/*//////////////// Why trust us ///////////////*/}
-
           <h2 className="title">Why you should trust us</h2>
 
           <div className="trust__us">
@@ -183,46 +201,16 @@ function Home() {
             </p>
             <h3 className="title2 ">Meet the team commited to serve you</h3>
             <div className="team flex">
-              <div className="team__member flex__col">
-                <TeamMember
-                  image={team_1}
-                  title="Founder"
-                  comments="This project keeps me up at night"
-                  name="Chenwi Eugene"
-                />
-              </div>
-
-              <div className="team__member-down flex__col">
-                <TeamMember
-                  image={team_2}
-                  title="Lorem enginne"
-                  comments="Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry
-                    standard."
-                  name="Eddie Seif"
-                />
-              </div>
-
-              <div className="team__member flex__col">
-                <TeamMember
-                  image={team_3}
-                  title="Lorem ipsum dolor"
-                  comments="Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry
-                    standard."
-                  name="Irene Ekoti"
-                />
-              </div>
-              <div className="team__member-down flex__col">
-                <TeamMember
-                  image={team_4}
-                  title="Lorem ipsum"
-                  comments="Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry
-                    standard."
-                  name="Nchida Nelson"
-                />
-              </div>
+              {team.map(({ title, name, image, comments }, index) => (
+                <div className={`flex__col team__member${(index % 2 !== 0) ? '-down' : ''}`} key={index}>
+                  <TeamMember
+                    image={image}
+                    title={title}
+                    comments={comments}
+                    name={name}
+                  />
+                </div>
+              ))}
             </div>
 
             <h3 className="title2 cta__title">Sign up here</h3>
@@ -264,5 +252,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

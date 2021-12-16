@@ -8,6 +8,7 @@ import Subtotal from './Subtotal';
 function Checkout() {
   const { basket, user } = useStateValue()[0];
   // debugger
+  console.log({ store: useStateValue() });
   return (
     <div className="checkout container flex__col">
       <BottomAds />

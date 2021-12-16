@@ -18,7 +18,7 @@ function Product({ _id, title, image, price, rating, reviews }) {
         title: title,
         image: image,
         price: price,
-        rating: rating,
+        rating: rating
       },
     });
   };
