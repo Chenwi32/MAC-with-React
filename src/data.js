@@ -24,6 +24,7 @@ const data = {
       rating: 5,
       reviews: "20 reviews",
       _id: 6,
+      type: "Clay",
     },
 
     {
@@ -35,6 +36,7 @@ const data = {
       rating: 3.5,
       reviews: "15 reviews",
       _id: 4,
+      type: "Clay",
     },
 
     {
@@ -46,6 +48,7 @@ const data = {
       rating: 4.5,
       reviews: "10 reviews",
       _id: 2,
+      type: "Clay",
     },
 
     {
@@ -57,6 +60,7 @@ const data = {
       rating: 4,
       reviews: "7 reviews",
       _id: 7,
+      type: "Clay",
     },
 
     {
@@ -68,6 +72,7 @@ const data = {
       rating: 4.5,
       reviews: "10 reviews",
       _id: 8,
+      type: "Clay",
     },
 
     {
@@ -79,6 +84,7 @@ const data = {
       rating: 4.5,
       reviews: "12 reviews",
       _id: 5,
+      type: "Clay",
     },
 
     {
@@ -90,6 +96,7 @@ const data = {
       rating: 4,
       reviews: "14 reviews",
       _id: 9,
+      type: "Clay",
     },
 
     {
@@ -101,6 +108,7 @@ const data = {
       rating: 4.5,
       reviews: "18 reviews",
       _id: 3,
+      type: "Clay",
     },
 
     {
@@ -112,6 +120,7 @@ const data = {
       rating: 3.5,
       reviews: "16 reviews",
       _id: 10,
+      type: "Clay",
     },
 
     {
@@ -123,6 +132,7 @@ const data = {
       rating: 4.5,
       reviews: "10 reviews",
       _id: 11,
+      type: "Clay",
     },
     {
       title: "Decoration Stand",
@@ -133,6 +143,7 @@ const data = {
       rating: 5,
       reviews: "17 reviews",
       _id: 1,
+      type: "Clay",
     },
 
     {
@@ -144,6 +155,7 @@ const data = {
       rating: 4.5,
       reviews: "10 reviews",
       _id: 12,
+      type: "Clay",
     },
   ],
 };

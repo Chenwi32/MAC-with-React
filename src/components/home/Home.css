@@ -82,10 +82,8 @@
   position: relative;
 }
 
-.our__services ul li:hover,
 .our__services ul li:hover .li__svg {
   opacity: 1;
-  text-decoration: underline;
 }
 
 .li__svg {

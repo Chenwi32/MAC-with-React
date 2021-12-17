@@ -5,7 +5,7 @@ import Rating from "../Rating";
 import { useHistory } from "react-router";
 /* import { Link as button } from "react-router-dom"; */
 
-function Product({ _id, title, image, price, rating, reviews }) {
+function Product({ id, title, image, price, rating, reviews }) {
   const history = useHistory();
 
   const dispatch = useStateValue()[1];
@@ -14,11 +14,11 @@ function Product({ _id, title, image, price, rating, reviews }) {
     dispatch({
       type: "ADD_TO_CART",
       item: {
-        id: _id,
-        title: title,
-        image: image,
-        price: price,
-        rating: rating,
+        id,
+        title,
+        image,
+        price,
+        rating,
       },
     });
   };
@@ -54,7 +54,7 @@ function Product({ _id, title, image, price, rating, reviews }) {
 
         <button
           className="learn-more"
-          onClick={() => history.push(`/product/${_id}`)}
+          onClick={() => history.push(`/product/${id}`)}
         >
           Learn more
         </button>
