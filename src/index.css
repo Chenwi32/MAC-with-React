@@ -37,6 +37,12 @@ code {
   display: flex;
 }
 
+.flex__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .flex__col {
   display: flex;
   flex-direction: column;
@@ -148,4 +154,12 @@ code {
   font-size: 2em;
   width: fit-content;
   margin-top: 2.5rem;
+}
+
+.danger {
+  color: red;
+}
+
+.success {
+  color: green;
 }
