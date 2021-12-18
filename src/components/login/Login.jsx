@@ -71,7 +71,7 @@ function Login() {
         </div>
 
         <div className="visuals flex__col flex__center">
-          <img src="/images/flower-2.png" alt="" />
+          <img src="/images/ankara-fabrics-4.png" alt="" />
         </div>
       </div>
     </div>

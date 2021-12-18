@@ -14,7 +14,8 @@
   width: 750px;
   height: 550px;
 
-  background: #444545;
+  background: rgba(236, 31, 4, 0.459);
+  /* background: #444545; */
 }
 
 .logo {

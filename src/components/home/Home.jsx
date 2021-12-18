@@ -102,7 +102,7 @@ function Home() {
               ever since the 1500s
             </p>
             <ul>
-              <li>
+              <li className="list-items">
                 Lorem ipsum dolor sit amet.
                 <span className="li__svg">
                   <svg
@@ -117,7 +117,7 @@ function Home() {
                 </span>
               </li>
 
-              <li>
+              <li className="list-items">
                 Lorem ipsum dolor sit amet.
                 <span className="li__svg">
                   <svg
@@ -132,7 +132,7 @@ function Home() {
                 </span>
               </li>
 
-              <li>
+              <li className="list-items">
                 Lorem ipsum dolor sit amet.
                 <span className="li__svg">
                   <svg
@@ -146,7 +146,7 @@ function Home() {
                   </svg>
                 </span>
               </li>
-              <li>
+              <li className="list-items">
                 Lorem ipsum dolor sit amet.
                 <span className="li__svg">
                   <svg

@@ -61,7 +61,7 @@
   list-style: none;
 }
 
-.our__services ul li {
+.list-items {
   font-size: 1.4em;
   margin: 1rem 0;
   padding: 0.3rem;
@@ -69,7 +69,7 @@
   transition: 0.5s;
 }
 
-.our__services ul li:before {
+.list-items:before {
   content: "";
   border-color: transparent rgba(236, 31, 4, 0.74);
   border-style: solid;
