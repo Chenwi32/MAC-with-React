@@ -1,5 +1,6 @@
 import React from "react";
 import data from "../../data";
+import { useStateValue } from "../../StateProvider";
 import Header from "../header/Header";
 import Rating from "../Rating";
 import "./SingleProduct.css";
@@ -9,7 +10,22 @@ function SingleProduct(props) {
     (x) => x._id === parseInt(props.match.params.id)
   );
 
-  const { image, title, price, description, rating, reviews, type } = product;
+  const {id, image, title, price, description, rating, reviews, type } = product;
+
+  const dispatch = useStateValue()[1];
+
+  const addToCart = () => {
+    dispatch({
+      type: "ADD_TO_CART",
+      item: {
+        id,
+        title,
+        image,
+        price,
+        rating,
+      },
+    });
+  };
 
   if (!product) {
     return (
@@ -68,7 +84,9 @@ function SingleProduct(props) {
               <strong>{price}</strong>
             </span>
           </p>
-          <button className="btn">Add to cart</button>
+          <button className="btn" onClick={addToCart}>
+            Add to cart
+          </button>
         </div>
       </div>
     </div>

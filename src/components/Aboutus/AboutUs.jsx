@@ -45,11 +45,40 @@ function AboutUs() {
         together to make something great.
       </p>
 
-      <h2 className="title3">Our Goal</h2>
+      <p className="about__p">
+        <span className="first__char">T</span>hrough this endeavor, African
+        Tradition, Arts, and Culture of aesthetics will be much more exposed and
+        well appreciated. We will ensure customer policies and transactions
+        through the best value for money backed by quality and satisfaction in
+        all of our packages.
+      </p>
+
+      <h2 className="title3">Our Vision</h2>
 
       <p className="about__p">
-        <span className="first__char">O</span>ur
+        <span className="first__char">M</span>Africulture is a start up with
+        limited resources gearing toward becoming the <strong>largest</strong>{" "}
+        indigenous e-Commerce portal in Africa.
       </p>
+
+      <h2 className="title3">Our Values</h2>
+
+      <ul>
+        <li className="list-items">
+          Integrity in dealing honestly with stakeholders
+        </li>
+        <li className="list-items">
+          Ensuring Economic Vitality and Financial Sustainability
+        </li>
+        <li className="list-items">
+          Consistent Delivery of Quality Services and Connecting Community
+          Members
+        </li>
+        <li className="list-items">
+          Providing secure investment opportunities to customers, career growth
+          opportunities, and potential partners to responsible employees.
+        </li>
+      </ul>
     </div>
   );
 }
