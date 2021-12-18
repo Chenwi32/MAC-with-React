@@ -51,12 +51,12 @@ function App() {
     <Router>
       <div className="app">
         <Switch>
-          <Route path="/register">
-            <Register />
+          <Route path="/register" component={Register}>
+            {/* <Register /> */}
           </Route>
 
-          <Route path="/login">
-            <Login />
+          <Route path="/login" component={Login}>
+            {/* <Login /> */}
           </Route>
 
           <Route path="/checkout">

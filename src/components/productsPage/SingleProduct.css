@@ -1,0 +1,38 @@
+/* Mobile first styling appraoch */
+
+/* .single-product {
+  padding: 1rem;
+}
+ */
+
+.single-product__image {
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+
+.single-product__image img {
+  width: 70%;
+  height: 100%;
+}
+
+.single-product__details {
+  margin: 1.5rem 0;
+}
+
+.single-product__details p {
+  margin: 1rem 0;
+}
+
+.single-product__action {
+  height: 200px;
+  border: 1px solid rgba(204, 34, 4);
+
+  padding: 1rem;
+}
+
+.single-product__image,
+.single-product__details,
+.single-product__action {
+  margin: 1rem;
+}
