@@ -20,38 +20,56 @@ function SingleProduct(props) {
   }
 
   return (
-    <div className="container single-product flex__col">
+    <div>
       <Header />
+      <div className="container single-product flex__col flex__center">
+        <div className="single-product__image flex">
+          {<img src={image} alt={title} />}
+        </div>
 
-      <div className="single-product__image flex">
-        {<img src={image} alt={title} />}
-      </div>
+        <div className="single-product__details">
+          <h4> {product.title}</h4>
 
-      <div className="single-product__details">
-        <h3> {product.title}</h3>
+          <p>
+            <strong>Type: {type}</strong>
+          </p>
 
-        <p>
-          <strong>Type: {type}</strong>
-        </p>
+          <p className="description">
+            <strong>Description:</strong>
 
-        <p className="description">
-          <strong>Description:</strong>
+            <br />
 
-          <br />
+            {description}
+          </p>
 
-          {description}
-        </p>
+          <p>
+            <strong>Price: </strong>
+            <small>XAF</small> <strong>{price}</strong>
+          </p>
 
-        <p>
-          <strong>Price: </strong>
-          <small>XAF</small> <strong>{price}</strong>
-        </p>
+          <Rating reviews={reviews} rating={rating} />
+        </div>
 
-        <Rating reviews={reviews} rating={rating} />
-      </div>
+        <div className="single-product__action flex__col flex__center">
+          <p className="product__status flex">
+            <span>Status</span>
+            <span className="success">In stock</span>
+          </p>
 
-      <div className="single-product__action flex__col">
-        <button className="btn">Add to cart</button>
+          <div className="product__quantity flex">
+            <p>Quantity</p>
+
+            <input type="number" />
+          </div>
+
+          <p className=" product__price flex">
+            <span>Cost: </span>
+            <span>
+              <strong>{price}</strong>
+            </span>
+          </p>
+          <button className="btn">Add to cart</button>
+        </div>
       </div>
     </div>
   );
