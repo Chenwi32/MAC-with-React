@@ -13,6 +13,8 @@ function Footer() {
         <div className="footer__main flex">
           <div className="social flex__col">
             <a
+              rel="noreferrer"
+              target="_blank"
               href="https://web.facebook.com/MAfriculture"
               className="social__link flex"
             >
@@ -23,6 +25,8 @@ function Footer() {
             </a>
 
             <a
+              rel="noreferrer"
+              target="_blank"
               href="https://www.instagram.com/mafriculture/"
               className="social__link flex"
             >
@@ -33,6 +37,8 @@ function Footer() {
             </a>
 
             <a
+              rel="noreferrer"
+              target="_blank"
               href="https://www.pinterest.com/mafriculture"
               className="social__link flex"
             >
@@ -43,6 +49,8 @@ function Footer() {
             </a>
 
             <a
+              rel="noreferrer"
+              target="_blank"
               href="https://twitter.com/ChenwiEugene"
               className="social__link flex"
             >
