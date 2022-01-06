@@ -71,3 +71,19 @@ if (toggleBtn) {
   toggleBtn.addEventListener("click", () => toggle());
   overlay.addEventListener("click", () => toggle());
 }
+
+// Home header imformation display
+
+const imformationPannel = document.getElementById("imformation");
+
+const showImformation = () => {
+  if (imformationPannel) {
+    setTimeout(() => {
+      imformationPannel.classList.remove("hide");
+    }, 10000);
+  }
+};
+
+window.onload = function () {
+  showImformation();
+};
