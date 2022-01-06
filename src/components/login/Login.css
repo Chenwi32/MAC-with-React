@@ -10,12 +10,11 @@
 .login__container {
   margin: 1rem auto;
 
-  box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.034);
+  box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.281);
   width: 750px;
   height: 550px;
 
   background: rgba(236, 31, 4, 0.459);
-  /* background: #444545; */
 }
 
 .logo {
@@ -34,7 +33,7 @@
 
 .login-form__container {
   padding: 1rem;
-  width: 45%;
+  width: 50%;
   background: #fff;
 }
 
