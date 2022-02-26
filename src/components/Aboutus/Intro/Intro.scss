@@ -1,0 +1,29 @@
+.intro {
+  padding: 0;
+  margin: 3em 0;
+}
+
+.yout__video {
+  width: 60%;
+  height: 300px;
+  margin-left: 0;
+  margin-top: 1.5em;
+}
+
+.yout__video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 700px) {
+  .intro {
+    padding: 1.5rem 0.5rem;
+    margin: 2rem 0;
+  }
+
+  .yout__video {
+    width: 80%;
+    height: 200px;
+    margin: 5rem auto 1rem;
+  }
+}

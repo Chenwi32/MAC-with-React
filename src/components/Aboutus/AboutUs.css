@@ -25,12 +25,7 @@
   color: rgb(236, 31, 4);
 }
 
-.about__intro {
-  font-size: 1.4em;
-  width: 100%;
-}
-
 .about__p {
-  font-size: 1.3em;
+  font-size: 1.1rem;
   margin: 1rem 0;
 }
