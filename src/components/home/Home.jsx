@@ -7,6 +7,7 @@ import BottomAds from "../bottomAds/BottomAds";
 import Banner from "./banner/Banner";
 import { db } from "../../firebase";
 import PremiumProd from "./PremiumProd/PremiumProd";
+import LatestProds from "../LatestProds/LatestProds";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -52,6 +53,8 @@ function Home() {
           </div>
 
           <PremiumProd />
+
+          <LatestProds />
 
           <h2 className="title">Our Services</h2>
 

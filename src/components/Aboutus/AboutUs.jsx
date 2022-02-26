@@ -23,7 +23,7 @@ function AboutUs() {
         and craft, and market these great designs to the world
       </p>
 
-      <h2 className="title3">Our Mission</h2>
+      <h2 className="title2">Our Mission</h2>
 
       <p className="about__p">
         <span className="first__char">T</span>here are a lot of creative minds
@@ -57,7 +57,7 @@ function AboutUs() {
         all of our packages.
       </p>
 
-      <h2 className="title3">Our Vision</h2>
+      <h2 className="title2">Our Vision</h2>
 
       <p className="about__p">
         <span className="first__char">M</span>Africulture is a start up with
@@ -65,7 +65,7 @@ function AboutUs() {
         indigenous e-Commerce portal in Africa.
       </p>
 
-      <h2 className="title3">Our Values</h2>
+      <h2 className="title2">Our Values</h2>
 
       <ul>
         <li className="list-items">
