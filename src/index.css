@@ -139,18 +139,15 @@ code {
 .title {
   color: rgb(236, 31, 4);
   font-size: 2em;
-  border-top: 1px solid;
-  width: fit-content;
-
-  padding: 0.5rem 2rem 0.5rem 0;
-  margin-top: 3rem;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 }
 
 .title2 {
   color: rgb(236, 31, 4);
   font-size: 1.7em;
   width: fit-content;
-  margin: 3rem 1rem;
+  margin: 1em 0;
 }
 
 .title3 {

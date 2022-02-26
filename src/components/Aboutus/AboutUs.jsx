@@ -1,5 +1,7 @@
 import React from "react";
+import OurStrengths from "../OurStrengths/OurStrengths";
 import "./AboutUs.css";
+import Intro from "./Intro/Intro";
 
 function AboutUs() {
   return (
@@ -11,7 +13,9 @@ function AboutUs() {
         <span className="a">A</span>friculture
       </h1>
 
-      <p className="about__intro">
+      <Intro />
+
+      <p className="about__p">
         <span className="first__char">M</span>Africulture which basically means
         <strong> M</strong>odern
         <strong> A</strong>frican culture is a new trending business brand with
@@ -79,6 +83,8 @@ function AboutUs() {
           opportunities, and potential partners to responsible employees.
         </li>
       </ul>
+
+      <OurStrengths />
     </div>
   );
 }
