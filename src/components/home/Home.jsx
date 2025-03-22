@@ -6,15 +6,31 @@ import BottomAds from "../bottomAds/BottomAds";
 
 import Banner from "./banner/Banner";
 import { db } from "../../firebase";
-import PremiumProd from "./PremiumProd/PremiumProd";
-import LatestProds from "../LatestProds/LatestProds";
 
-function Home() {
-  const [products, setProducts] = useState([]);
+export default function Home() {
+  const [products, setProducts] = useState([])
+  const [team, setTeam] = useState([])
+  const dispatch = useStateValue()[1]
 
   useEffect(() => {
-    getProducts();
-  }, []);
+    getProducts()
+    getTeam()
+  }, [])
+
+  useEffect(() => {
+    // Add products to the store so that it will available to other components
+    if (products) {
+      dispatch({
+        type: "SET_PRODUCTS",
+        products
+      });
+    } else {
+      dispatch({
+        type: "SET_PRODUCTS",
+        products: [],
+      });
+    }
+  }, [dispatch, products]);
 
   const getProducts = () => {
     db.collection("products")
@@ -29,7 +45,17 @@ function Home() {
       });
   };
 
-  console.log({ products });
+  const getTeam = () => {
+    db.collection('team').get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          setTeam(prev => ([...prev, doc.data()]))
+        })
+      })
+      .catch(err => {
+        console.log(err.message)
+      })
+  }
 
   return (
     <div className="home">
@@ -125,11 +151,10 @@ function Home() {
               </li>
             </ul>
           </div>
+
         </div>
         <BottomAds />
       </div>
     </div>
   );
 }
-
-export default Home;

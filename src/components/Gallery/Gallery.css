@@ -12,6 +12,10 @@
   height: 100%;
 }
 
+.ril-image-current.ril__image {
+  width: auto;
+  height: auto;
+}
 .viewimage {
   position: absolute;
   top: 50px;

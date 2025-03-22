@@ -14,11 +14,6 @@ function Product({ id, title, image, price, rating, reviews }) {
     dispatch({
       type: "ADD_TO_CART",
       item: {
-        id,
-        title,
-        image,
-        price,
-        rating,
       },
     });
   };

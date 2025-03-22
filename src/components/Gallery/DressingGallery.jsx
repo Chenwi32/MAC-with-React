@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import Lightbox from 'react-image-lightbox';
 import ImageViewer from "../imageViewer/ImageViewer";
 import {
   dress_1,
+  dress_2,
+  dress_3,
   dress_4,
   dress_5,
   dress_6,
@@ -27,6 +30,9 @@ const images = [
 ];
 
 function DressingGallery() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [photoIndex, setPhotoIndex] = useState(0)
+  console.log(photoIndex);
   const showImageViewer = () => {
     const imageViewer = document.querySelector(".viewimage");
     let classList = imageViewer.classList;
@@ -50,29 +56,43 @@ function DressingGallery() {
     <div class="container">
       <div className="gallery grid__4">
         <div className=" gallery__image-container">
-          <img src={dress_1} alt="" className="gallery__image" />
+          <img src={dress_1} alt="" className="gallery__image" onClick={(e) => { setIsOpen(true); setPhotoIndex(e.target.src) }} />
         </div>
         <div className="gallery__image-container">
-          <img src={dress_4} alt="" className="gallery__image" />
+          <img src={dress_4} alt="" className="gallery__image" onClick={(e) => { setIsOpen(true); setPhotoIndex(e.target.src) }} />
         </div>
         <div className="gallery__image-container">
-          <img src={dress_5} alt="" className="gallery__image" />
+          <img src={dress_5} alt="" className="gallery__image" onClick={(e) => { setIsOpen(true); setPhotoIndex(e.target.src) }} />
         </div>
         <div className="gallery__image-container">
-          <img src={dress_6} alt="" className="gallery__image" />
+          <img src={dress_6} alt="" className="gallery__image" onClick={(e) => { setIsOpen(true); setPhotoIndex(e.target.src) }} />
         </div>
         <div className="gallery__image-container">
-          <img src={dress_7} alt="" className="gallery__image" />
+          <img src={dress_7} alt="" className="gallery__image" onClick={(e) => { setIsOpen(true); setPhotoIndex(e.target.src) }} />
         </div>
         <div className="gallery__image-container">
-          <img src={dress_8} alt="" className="gallery__image" />
+          <img src={dress_8} alt="" className="gallery__image" onClick={(e) => { setIsOpen(true); setPhotoIndex(e.target.src) }} />
         </div>
         <div className="gallery__image-container">
-          <img src={dress_9} alt="" className="gallery__image" />
+          <img src={dress_9} alt="" className="gallery__image" onClick={(e) => { setIsOpen(true); setPhotoIndex(e.target.src) }} />
         </div>
         <div className="gallery__image-container">
-          <img src={dress_10} alt="" className="gallery__image" />
+          <img src={dress_10} alt="" className="gallery__image" onClick={(e) => { setIsOpen(true); setPhotoIndex(e.target.src) }} />
         </div>
+        {isOpen && (
+          <Lightbox
+            mainSrc={photoIndex}
+            // nextSrc={images[(photoIndex + 1) % images.length]}
+            // prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+            onCloseRequest={() => setIsOpen(false)}
+            // onMovePrevRequest={() =>
+            //   setPhotoIndex((photoIndex + images.length - 1) % images.length)
+            // }
+            // onMoveNextRequest={() =>
+            //   setPhotoIndex((photoIndex + 1) % images.length)
+            // }
+          />
+        )}
       </div>
 
       <div className="viewimage fade2">
