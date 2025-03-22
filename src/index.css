@@ -21,6 +21,10 @@ img {
   width: 100%;
 }
 
+ul {
+  list-style: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -35,6 +39,12 @@ code {
 
 .flex {
   display: flex;
+}
+
+.flex__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex__col {
@@ -129,23 +139,20 @@ code {
 .title {
   color: rgb(236, 31, 4);
   font-size: 2em;
-  border-top: 1px solid;
-  width: fit-content;
-
-  padding: 0.5rem 2rem 0.5rem 0;
-  margin-top: 3rem;
+  margin-bottom: 1em;
 }
 
 .title2 {
   color: rgb(236, 31, 4);
-  font-size: 1.7em;
+  font-size: 1.5em;
   width: fit-content;
-  margin: 3rem 1rem;
+  margin: 1em 0;
 }
 
-.title3 {
-  color: rgb(236, 31, 4);
-  font-size: 2em;
-  width: fit-content;
-  margin-top: 2.5rem;
+.danger {
+  color: red;
+}
+
+.success {
+  color: green;
 }

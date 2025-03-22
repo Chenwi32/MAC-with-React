@@ -1,0 +1,88 @@
+/* Mobile first styling appraoch */
+
+/* .single-product {
+  padding: 1rem;
+}
+ */
+
+.single-product__image {
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+
+.single-product__image img {
+  width: 70%;
+  height: 100%;
+}
+
+.single-product__details {
+  margin: 1.5rem 0;
+  line-height: 1.5;
+}
+
+.single-product__details p {
+  margin: 1rem 0;
+}
+
+.single-product__action {
+  height: 200px;
+  border: 1px solid rgba(204, 34, 4);
+
+  padding: 1rem;
+}
+
+.single-product__image,
+.single-product__details,
+.single-product__action {
+  margin: 1rem 0;
+}
+
+.single-product__action .btn {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.product__quantity {
+  margin: 1rem 0;
+}
+
+.product__price,
+.product__status,
+.product__quantity {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.product__quantity input {
+  width: 20%;
+  padding: 0.3rem;
+  outline: none;
+}
+
+@media (min-width: 700px) {
+  .single-product {
+    flex-direction: row;
+    height: 100%;
+    align-items: flex-start;
+    padding-top: 1.5rem;
+  }
+
+  .single-product__image {
+    width: 50%;
+    height: 100%;
+  }
+
+  .single-product__image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .single-product__details {
+    padding: 0 1.5rem;
+  }
+
+  .single-product__action {
+    width: 400px;
+  }
+}

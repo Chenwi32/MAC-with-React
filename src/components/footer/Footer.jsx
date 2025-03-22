@@ -11,8 +11,10 @@ function Footer() {
     <div className="footer ">
       <div className="footer__container container flex__col">
         <div className="footer__main flex">
-          <div className="social flex__col">
+          <div className="social flex">
             <a
+              rel="noreferrer"
+              target="_blank"
               href="https://web.facebook.com/MAfriculture"
               className="social__link flex"
             >
@@ -23,6 +25,8 @@ function Footer() {
             </a>
 
             <a
+              rel="noreferrer"
+              target="_blank"
               href="https://www.instagram.com/mafriculture/"
               className="social__link flex"
             >
@@ -33,6 +37,8 @@ function Footer() {
             </a>
 
             <a
+              rel="noreferrer"
+              target="_blank"
               href="https://www.pinterest.com/mafriculture"
               className="social__link flex"
             >
@@ -43,6 +49,8 @@ function Footer() {
             </a>
 
             <a
+              rel="noreferrer"
+              target="_blank"
               href="https://twitter.com/ChenwiEugene"
               className="social__link flex"
             >
@@ -52,43 +60,6 @@ function Footer() {
               <span className="social__link-name">Twitter</span>
             </a>
           </div>
-
-          <hr />
-
-          <form className="footer__main-form flex__col" action="">
-            <div className="footer__cta__input-container flex__col">
-              <p>
-                If you have any sugestions on how we could improve our System,
-                please leave a message below
-              </p>
-              <label className="footer__cta-label" htmlFor="name">
-                Name:
-              </label>
-              <input type="text" className="footer__cta-input" />
-
-              <label className="footer__cta-label" htmlFor="email">
-                Email:
-              </label>
-              <input type="email" className="footer__cta-input" />
-
-              <label className="footer__cta-label" htmlFor="message">
-                Message:
-              </label>
-
-              <textarea
-                className="message"
-                name="message"
-                id=""
-                cols="30"
-                rows="10"
-              ></textarea>
-            </div>
-            <div className="footer__cta__button flex">
-              <button type="submit" className="btn2">
-                Send
-              </button>
-            </div>
-          </form>
         </div>
 
         <div className="footer__bottom flex">

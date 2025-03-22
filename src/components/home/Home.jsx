@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
-import {
-  product_1,
-} from "../images/imageindex";
+
 import Product from "../product/Product";
 import BottomAds from "../bottomAds/BottomAds";
-import TeamMember from "./teamMembers/TeamMember";
+
 import Banner from "./banner/Banner";
 import { db } from "../../firebase";
-import { useStateValue } from '../../StateProvider'
 
 export default function Home() {
   const [products, setProducts] = useState([])
@@ -65,24 +62,6 @@ export default function Home() {
       <Banner />
       <div className="home-container container flex__col">
         <div className="main">
-          <div className="intro">
-            <h2>
-              Welcome to MAfriculture, the new trending arts and craft market in
-              the world. <br />
-              Please watch this intrduction from the founder of the company.
-            </h2>
-
-            <div className="yout__video">
-              <iframe
-                src="https://www.youtube.com/embed/bmVKaAV_7-A?autoplay=0"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-
           <h2 className="title">Featured Products</h2>
 
           <div className="one__row grid__3">
@@ -99,19 +78,9 @@ export default function Home() {
             ))}
           </div>
 
-          <h2 className="title">Premium Product</h2>
+          <PremiumProd />
 
-          <div className="one__row premium">
-            <div className="premium">
-              <Product
-                title="Floor Flower Vase with Inscription"
-                image={product_1}
-                price={15000}
-                rating={5}
-                id={6}
-              />
-            </div>
-          </div>
+          <LatestProds />
 
           <h2 className="title">Our Services</h2>
 
@@ -122,7 +91,7 @@ export default function Home() {
               ever since the 1500s
             </p>
             <ul>
-              <li>
+              <li className="list-items">
                 Lorem ipsum dolor sit amet.
                 <span className="li__svg">
                   <svg
@@ -137,8 +106,8 @@ export default function Home() {
                 </span>
               </li>
 
-              <li>
-                Lorem ipsum dolor sit amet.{"  "}
+              <li className="list-items">
+                Lorem ipsum dolor sit amet.
                 <span className="li__svg">
                   <svg
                     width="24"
@@ -152,8 +121,8 @@ export default function Home() {
                 </span>
               </li>
 
-              <li>
-                Lorem ipsum dolor sit amet.{"  "}
+              <li className="list-items">
+                Lorem ipsum dolor sit amet.
                 <span className="li__svg">
                   <svg
                     width="24"
@@ -166,8 +135,8 @@ export default function Home() {
                   </svg>
                 </span>
               </li>
-              <li>
-                Lorem ipsum dolor sit amet.{"  "}
+              <li className="list-items">
+                Lorem ipsum dolor sit amet.
                 <span className="li__svg">
                   <svg
                     width="24"
@@ -183,71 +152,8 @@ export default function Home() {
             </ul>
           </div>
 
-          <h2 className="title">Why you should trust us</h2>
-
-          <div className="trust__us">
-            <p className="trust__us-p">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque natus cumque impedit veritatis amet fugit excepturi?
-              Sunt suscipit numquam adipisci iste ut ullam. Veniam commodi
-              molestias suscipit ut maxime modi at doloremque perspiciatis nisi?
-              Commodi iste eum hic facilis fugiat eaque, provident velit vel
-              perspiciatis quasi ex quam non aliquid nam cum dicta beatae
-              delectus quidem quod corrupti saepe. Corrupti ullam rem quo
-              corporis maxime ratione provident in aliquam. Doloremque eaque
-              blanditiis animi minima nulla, dolorum commodi officia, tempora
-              consequatur odio ipsa velit dolorem quam corrupti rerum rem libero
-              itaque numquam ipsam delectus illo vel magnam dicta?
-            </p>
-            <h3 className="title2 ">Meet the team commited to serve you</h3>
-            <div className="team flex">
-              {team.map(({ title, name, image, comments }, index) => (
-                <div className={`flex__col team__member${(index % 2 !== 0) ? '-down' : ''}`} key={index}>
-                  <TeamMember
-                    image={image}
-                    title={title}
-                    comments={comments}
-                    name={name}
-                  />
-                </div>
-              ))}
-            </div>
-
-            <h3 className="title2 cta__title">Sign up here</h3>
-
-            <div className="cta">
-              <p className="cta__p">
-                We are working to make this a multi-vendor platform, so we
-                strongly encourage you to register your interest if you are a
-                creative arts and craft designer looking to expand your scope
-                and get more people to know about your work and get to buy from
-                you. <br />
-                if you are not a designer but love our products, we still
-                encourage to sign up for an account as a regular customer so
-                that you can be benefiting from our bonuses.
-              </p>
-              <form action="" className="cta__form flex">
-                <div className="cta__input-container flex__col">
-                  <label className="cta__label" htmlFor="username">
-                    Username:
-                  </label>
-                  <input type="text" className="cta__input" />
-
-                  <label className="cta__label" htmlFor="email">
-                    Email:
-                  </label>
-                  <input type="email" className="cta__input" />
-                </div>
-                <div className="cta__button flex">
-                  <button type="submit" className="btn">
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <BottomAds />
         </div>
+        <BottomAds />
       </div>
     </div>
   );

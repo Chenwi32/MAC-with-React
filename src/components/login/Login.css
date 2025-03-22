@@ -1,12 +1,20 @@
 .login {
-  width: 60%;
-  margin: 1rem auto;
-  background-color: #bec2c2;
+  height: fit-content;
+  margin: auto;
   align-items: center;
-  padding: 2rem;
 }
 .login a:hover {
   text-decoration: underline;
+}
+
+.login__container {
+  margin: 1rem auto;
+
+  box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.281);
+  width: 750px;
+  height: 550px;
+
+  background: rgba(236, 31, 4, 0.459);
 }
 
 .logo {
@@ -15,20 +23,23 @@
   text-align: center;
 }
 
-.login img {
+.logo img {
   object-fit: contain;
   padding: 0.8rem 0.3rem;
-  width: 20%;
+  width: 25%;
   margin: auto;
   background-color: #fff;
-  /*   background-color: #131313fd; */
 }
 
-.login__container {
-  margin-top: 1rem;
+.login-form__container {
   padding: 1rem;
-  border: 1px solid #000;
-  width: 100%;
+  width: 50%;
+  background: #fff;
+}
+
+.login-form__container h1 {
+  text-align: center;
+  margin: 0.7rem;
 }
 
 .form {
@@ -38,18 +49,18 @@
 
 .form .btn {
   margin: 1rem 0;
-  width: 70%;
+  width: 100%;
+  padding: 0.5rem;
 }
 
 .input__container {
   width: 100%;
-  margin: 0.5rem 0 0;
 }
 
 .input {
   width: 96%;
-  padding: 0.3rem 0.5rem;
-  margin: 0.5rem;
+  padding: 0.2rem;
+  margin: 0 0 0.5rem;
   font-size: 1em;
   background-color: inherit;
   border: none;
@@ -65,7 +76,6 @@
 }
 
 .register {
-  margin-top: 0.2rem;
   background-color: inherit;
   font-weight: 600;
   color: rgb(236, 31, 4);
@@ -74,6 +84,17 @@
 }
 .register:hover {
   text-decoration: underline;
+}
+
+.visuals {
+  width: 55%;
+  background-color: inherit;
+}
+
+.visuals img {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
 }
 
 @media (max-width: 700px) {

@@ -51,13 +51,9 @@ function App() {
     <Router>
       <div className="app">
         <Switch>
-          <Route path="/register">
-            <Register />
-          </Route>
+          <Route path="/register" component={Register}></Route>
 
-          <Route path="/login">
-            <Login />
-          </Route>
+          <Route path="/login" component={Login}></Route>
 
           <Route path="/checkout">
             <div className="home__header">
@@ -150,7 +146,9 @@ function App() {
           </Route>
 
           <Route path="/" component={Home} exact>
-            <Imformation />
+            <div Id="imformation" className="hide">
+              <Imformation />
+            </div>
             <div className="home__header">
               <Header />
             </div>

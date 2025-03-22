@@ -26,26 +26,27 @@ const BgBtn = document.querySelector(".change__BGcolor");
 const productText = document.querySelectorAll(".about__product");
 let colors = ["#000", "#f0f0f0", "rgb(144, 170, 162)", "#444545"];
 
-if (!BgBtn);
-BgBtn.addEventListener("click", () => {
-  let randomColor = Math.floor(Math.random() * colors.length);
-  bodyBG.style.backgroundColor = colors[randomColor];
-  if (bodyBG.style.backgroundColor !== colors[0]) {
-    productBG.forEach((product) => {
-      product.style.backgroundColor = "#fff";
-    });
-    productText.forEach((product) => {
-      product.style.color = "#000";
-    });
-  } else if (bodyBG.style.backgroundColor === colors[0]) {
-    productBG.forEach((product) => {
-      product.style.backgroundColor = "#60636380";
-    });
-    productText.forEach((product) => {
-      product.style.color = "#fff";
-    });
-  }
-});
+if (BgBtn) {
+  BgBtn.addEventListener("click", () => {
+    let randomColor = Math.floor(Math.random() * colors.length);
+    bodyBG.style.backgroundColor = colors[randomColor];
+    if (bodyBG.style.backgroundColor !== colors[0]) {
+      productBG.forEach((product) => {
+        product.style.backgroundColor = "#fff";
+      });
+      productText.forEach((product) => {
+        product.style.color = "#000";
+      });
+    } else if (bodyBG.style.backgroundColor === colors[0]) {
+      productBG.forEach((product) => {
+        product.style.backgroundColor = "#60636380";
+      });
+      productText.forEach((product) => {
+        product.style.color = "#fff";
+      });
+    }
+  });
+}
 
 /*/ //////// Show Search Bar //////////*/
 
@@ -65,5 +66,46 @@ const toggle = () => {
   }
 };
 
-if (toggleBtn) toggleBtn.addEventListener("click", () => toggle());
-overlay.addEventListener("click", () => toggle());
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => toggle());
+  overlay.addEventListener("click", () => toggle());
+}
+
+// Home header imformation display
+
+const imformationPannel = document.getElementById("imformation");
+
+const showImformation = () => {
+  if (imformationPannel) {
+    setTimeout(() => {
+      imformationPannel.classList.remove("hide");
+    }, 10000);
+  }
+};
+
+/*//////// Banner Animated Images ///////*/
+
+export const animateText = () => {
+  const feel = document.getElementById("feel");
+  const priority = document.getElementById("priority");
+  const animatedTextCon = document.getElementById("animated__text");
+
+  if (animatedTextCon) {
+    animatedTextCon.innerHTML = feel.innerHTML;
+
+    setInterval(() => {
+      if (animatedTextCon.innerHTML === feel.innerHTML) {
+        animatedTextCon.innerHTML = priority.innerHTML;
+      } else {
+        animatedTextCon.innerHTML = feel.innerHTML;
+      }
+    }, 6000);
+  }
+};
+
+/*//////// End Banner Animated Images ///////*/
+
+window.onload = function () {
+  showImformation();
+  animateText();
+};
